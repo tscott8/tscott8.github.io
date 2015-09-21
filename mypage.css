@@ -1,0 +1,118 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+body {
+   background-image: url("background.jpg");
+   background-size: cover;
+	color: White;
+}
+
+
+#navbar nav {
+	background-color: black;
+	position: fixed;
+	width:100%;
+	top: 0;
+	left: 0;
+	max-height: 30px;
+	padding: .25%;
+	text-transform: uppercase;
+	font-family: verdana;
+}
+#navbar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	line-height: 30px;
+	width: 100%;
+}
+#navbar ul li {
+	float: left;
+	width: 16.5%;
+	line-height: 30px;
+
+}
+#navbar a:link, a:visited {
+	display: block;
+	width: 100%;
+	font-weight: bold   ;
+	color:White;
+	background-color: black;
+	text-align: center;
+	text-decoration: none;
+	line-height: 30px;
+
+}
+#navbar a:hover, a:active {
+	background-color: Green;
+	text-decoration: none;
+	line-height: 30px;
+   color: White;
+}
+
+a:link {
+	color: White;
+	background-color:transparent;
+	text-decoration:none;
+}
+a:visited {
+	color:White;
+	background-color:transparent;
+	text-decoration:none;
+}
+a:hover {
+	color:Green;
+	background-color:transparent;
+	text-decoration:underline;
+}
+a:active {
+	color:Green;
+	background-color:transparent;
+	text-decoration:underline;
+}
+
+#header header {
+	margin-top: 50px;
+	font-family: "Trebuchet MS";
+	padding: 1%;
+   text-shadow:3px 3px #000000;
+   text-align: center;
+}
+#header table, tr{
+	width: 100%;
+	border-collapse: collapse;
+}
+#header td{
+	width: 50%;
+   border-collapse: collapse;
+}
+#impact {
+   font-size: 150%;
+   font-family: "Trebuchet MS";
+   text-shadow:3px 3px #000000;
+   width: 100%;
+   text-align: left;
+   }
+#detailedInfo {
+   padding-bottom: 40px;
+   font-family: "Trebuchet MS";
+   text-shadow:3px 3px #000000;
+   text-align: justify;
+   line-height: 150%;
+}
+#footer footer{
+	background-color:black;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	padding: .25%;
+	color:white;
+	text-align:center;
+	max-height: 15px;
+	line-height: 15px;
+   font-family: verdana;
+}
