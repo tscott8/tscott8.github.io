@@ -1,15 +1,17 @@
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="mypage.css"/>
+        <link rel="stylesheet" type="text/css" href="Survey.css"/>
     </head>
-<body>
-    <?php
+<body onunload="back_block()">
+
+<?php
 
 #Get Votes
-    $q1a=$_POST["q1"];
-    $q2a=$_POST["q2"];
-    $q3a=$_POST["q3"];
-    $q4a=$_POST["q4"];
+function getVotes(){
+$arrIn = array('q1'=>$_POST["q1"], 'q2'=>$_POST["q2"],'q3'=>$_POST["q3"],'q4'=>$_POST["q4"]);
+    return $arrIn;
+
+}
 
 #Setup file.
 function setupDB(){
@@ -44,12 +46,12 @@ function loadDB(){
  return $arrIn;
 }
 
-function handleData($arrIn,$q1a,$q2a,$q3a,$q4a) {
+function handleData($DBIn,$votes) {
 #break up data
-    $arrQ1 = $arrIn['q1'];
-    $arrQ2 = $arrIn['q2'];
-    $arrQ3 = $arrIn['q3'];
-    $arrQ4 = $arrIn['q4'];
+    $arrQ1 = $DBIn['q1'];
+    $arrQ2 = $DBIn['q2'];
+    $arrQ3 = $DBIn['q3'];
+    $arrQ4 = $DBIn['q4'];
     
 #testing to make sure it worked
 /*echo $q1a . "<br>";
@@ -58,7 +60,7 @@ echo $q3a . "<br>";
 echo $q4a . "<br>";*/
     
 #append new data
-   switch($q1a){
+   switch($votes['q1']){
         case "yes":
             $arrQ1['yes']++;
             break;       
@@ -67,16 +69,15 @@ echo $q4a . "<br>";*/
             break;
     }
 
-    switch($q2a){
+    switch($votes['q2']){
         case "lightRockAlt":
             $arrQ2['lightRockAlt']++;
-            break;
-            
+            break;        
         case "hipHopPop":
             $arrQ2['hipHopPop']++;
             break;
         case "countryBlues":
-            $arrQ1['countryBlues']++;
+            $arrQ2['countryBlues']++;
             break;
         case "rap":
             $arrQ2['rap']++;
@@ -85,7 +86,7 @@ echo $q4a . "<br>";*/
             $arrQ2['hardRockMetal']++;
             break;
     }   
-    switch($q3a){
+    switch($votes['q3']){
         case "snowboarding":
             $arrQ3['snowboarding']++;
             break;
@@ -102,7 +103,7 @@ echo $q4a . "<br>";*/
             $arrQ3['code']++;
             break;
     }
-    switch($q4a){
+    switch($votes['q4']){
         case "cruise":
             $arrQ4['cruise']++;
             break;
@@ -124,11 +125,11 @@ echo $q4a . "<br>";*/
 }
 
 #Update Poll
-function updateDB($arrOut){
-    file_put_contents("polldb.json",json_encode($arrOut));
+function updateDB($DBOut){
+    file_put_contents("polldb.json",json_encode($DBOut));
 #verify update
     $arrIn2 = json_decode(file_get_contents('polldb.json'), true);
-if($arrOut === $arrIn2){ # => true
+if($DBOut === $arrIn2){ # => true
     echo "successfully updated";
 }
 else {
@@ -169,39 +170,52 @@ $arrPercents = array('q1p'=>$q1p,'q2p'=>$q2p,'q3p'=>$q3p,'q4p'=>$q4p);
 
 #Update WebPage
 function display($percents){
-    echo "<br><h4>1. Do you like Ilearn 3.0?</h4><br>"
-        .$percents['q1p']['pY']."% of people said yes<br>"
-        .$percents['q1p']['pN']."% of people said no<br>";
-    echo "<br><h4>2. Musical tastes</h4><br>"
-        .$percents['q2p']['p1']."% Light Rock/Alternative<br>"
-        .$percents['q2p']['p2']."% Hip Hop/Pop<br>"
-        .$percents['q2p']['p3']."% Country/Blues<br>"
-        .$percents['q2p']['p4']."% Rap<br>"
-        .$percents['q2p']['p5']."% Hard Rock/Metal<br>";
-     echo "<br><h4>3. Hobby tastes</h4><br>"
-        .$percents['q3p']['p1']."% Snowboarding<br>"
-        .$percents['q3p']['p2']."% Mountain Biking<br>"
-        .$percents['q3p']['p3']."% Watching Movies<br>"
-        .$percents['q3p']['p4']."% Sleeping<br>"
-        .$percents['q3p']['p5']."% Programming<br>";
-      echo "<br><h4>4. Vacational tastes</h4><br>"
-        .$percents['q4p']['p1']."% Cruise<br>"
-        .$percents['q4p']['p2']."% Mexico<br>"
-        .$percents['q4p']['p3']."% Disneyland/Universal Studios<br>"
-        .$percents['q4p']['p4']."% Camping<br>"
-        .$percents['q4p']['p5']."% Cabin Ski Trip<br>";
-}
-
-#AJAX
-function betterDisplay($percents){
+    echo "<form class=\"webPoll\">
+        <table class=\"center\"><tr><td><fieldset>";
+    echo "<h4>1. Do you like Ilearn 3.0?</h4><ul><li>"
+        .$percents['q1p']['pY']."% of people said yes</li><li>"
+        .$percents['q1p']['pN']."% of people said no</li></ul>";
+    echo "</fieldset></td></tr>";
+   
+    echo "<tr><td><fieldset>";
+    echo "<h4>2. Musical tastes</h4><ul><li>"
+        .$percents['q2p']['p1']."% Light Rock/Alternative</li><li>"
+        .$percents['q2p']['p2']."% Hip Hop/Pop</li><li>"
+        .$percents['q2p']['p3']."% Country/Blues</li><li>"
+        .$percents['q2p']['p4']."% Rap</li><li>"
+        .$percents['q2p']['p5']."% Hard Rock/Metal</li></ul>";
+    echo "</fieldset></td></tr>";
     
+    echo "<tr><td><fieldset>";
+    echo "<h4>3. Hobby tastes</h4><ul><li>"
+        .$percents['q3p']['p1']."% Snowboarding</li><li>"
+        .$percents['q3p']['p2']."% Mountain Biking</li><li>"
+        .$percents['q3p']['p3']."% Watching Movies</li><li>"
+        .$percents['q3p']['p4']."% Sleeping</li><li>"
+        .$percents['q3p']['p5']."% Programming</li></ul>";
+     echo "</fieldset></td></tr>";
+    
+    echo "<tr><td><fieldset>";
+    echo "<h4>4. Vacational tastes</h4><ul><li>"
+        .$percents['q4p']['p1']."% Cruise</li><li>"
+        .$percents['q4p']['p2']."% Mexico</li><li>"
+        .$percents['q4p']['p3']."% Disneyland/Universal Studios</li><li>"
+        .$percents['q4p']['p4']."% Camping</li><li>"
+        .$percents['q4p']['p5']."% Cabin Ski Trip</li></ul>";
+     echo "</fieldset></td></tr></table></form>";
 }
+if(isset($_POST["q1"])==true){
+$votes = getVotes();
 $DBIn = loadDB();
-$DBOut = handleData($DBIn,$q1a,$q2a,$q3a,$q4a);
+$DBOut = handleData($DBIn,$votes);
 updateDB($DBOut);
+}
+else {
+$DBOut = loadDB();
+}
 $percents = calcPercents($DBOut);
 display($percents);
-//betterDisplay(percents);
+   
 ?>
 </body>
 </html>

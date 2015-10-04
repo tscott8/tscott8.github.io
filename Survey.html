@@ -1,9 +1,13 @@
 <html>
 <head>
  <link rel="stylesheet" type="text/css" href="Survey.css"/>
-</head>
+
+    </head>
 <body>
-    <form class="webPoll" action="Survey.php" method="post">
+  
+  
+    <form class="webPoll" action="Survey.php" method="post" onsubmit="voteSubmitted()">
+          <button type="submit">Show me the results.</button>
         <table class="center">
             <tr>
                 <td>
@@ -21,16 +25,8 @@
                 <button type="submit" class="vote">Vote!</button>
             </p>
         </fieldset>
-            <td>
-                <fieldset id="aBox1">
-                    <h4>Responses</h4>
-                    <ul>
-                        <li>There should be some stuff here eventually.<br>I want this to update via Ajax</li>
-                    </ul>
-                </fieldset>
-                </td>
+          
             </tr>
-            
             <tr>
                 <td>
             <fieldset id="qBox2">
@@ -57,14 +53,6 @@
                 <button type="submit" class="vote">Vote!</button>
             </p>
         </fieldset>
-         <td>
-                <fieldset id="aBox2">
-                    <h4>Responses</h4>
-                    <ul>
-                        <li>There should be some stuff here eventually.<br>I want this to update via Ajax</li>
-                    </ul>
-                </fieldset>
-                </td>
             </tr>
        
             <tr>
@@ -92,14 +80,7 @@
                 <button type="submit" class="vote">Vote!</button>
             </p>
         </fieldset>
-          <td>
-                <fieldset id="aBox3">
-                    <h4>Responses</h4>
-                    <ul>
-                        <li>There should be some stuff here eventually.<br>I want this to update via Ajax</li>
-                    </ul>
-                </fieldset>
-                </td>
+         
             </tr>
         
             <tr>
@@ -127,14 +108,7 @@
                 <button type="submit" class="vote">Vote!</button>
             </p>
         </fieldset>
-          <td>
-                <fieldset id="aBox4">
-                    <h4>Responses</h4>
-                    <ul>
-                        <li>There should be some stuff here eventually.<br>I want this to update via Ajax</li>
-                    </ul>
-                </fieldset>
-                </td>
+         
             </tr>
         </table>
     </form>
