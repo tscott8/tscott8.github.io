@@ -1,19 +1,45 @@
 <html><body>
 <?php
 
+$user_type = 0;
+
 function check_user(){
-    if(isset($_POST['yes']))
-        create_user();
-    if(isset($_POST['no']))
+    $value = $_POST["q1"];
+    if($value == "yes")
+    {
+       new_user_form();
+    	create_user();   
+    }
+    else if($value == "no")
+    {
+        login_form();
         login();
+    }
+    else
+        echo "error, please try again<br>";
 }
-function create_user()
+
+function new_user_form(){
+   header('Location: new_user_form.html');
+}
+
+
+function login_form()
 {
-	echo "create user here";
+    header('Location: new_user_form.html'); 
 }
-function login()
+
+function goto_menu()
 {
-	echo "login here";
 }
+
+function main()
+{
+    check_user();
+    goto_menu($user_type);
+}
+
+main();
+
 ?>
     </body></html>
