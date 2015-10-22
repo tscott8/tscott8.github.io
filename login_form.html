@@ -1,0 +1,21 @@
+<?php
+include('login.php');
+session_start();
+if(isset($_SESSION['login_user'])){
+header("location: SuperRecruiter.php");
+}
+?>
+<html>
+<body>
+	<form id="login" action="login.php" method="post">
+		<fieldset>
+			<legend>Welcome Back!</legend>
+			Please Login
+			<ul>
+				<li>Username:<input type="email" id="username" name="username" required></li>
+				<li>Password:<input type="password" id="password" name="password" required></li>
+				<li><input type="submit" value="login"></li>
+			</ul>
+		</fieldset>
+	</form>
+</body></html>

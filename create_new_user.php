@@ -1,12 +1,6 @@
-<html><body>
 <?php
-function create_user()
+function RegisterUser()
 {
-   echo "getting the new user information...";
-//set user type
 }
-function main(){
-}
-main();
+
 ?>
-</body></html>

@@ -1,45 +1,19 @@
-<html><body>
 <?php
-
-$user_type = 0;
-
-function check_user(){
-    $value = $_POST["q1"];
-    if($value == "yes")
-    {
-       new_user_form();
-    	create_user();   
-    }
-    else if($value == "no")
-    {
-        login_form();
-        login();
-    }
-    else
-        echo "error, please try again<br>";
-}
-
-function new_user_form(){
-   header('Location: new_user_form.html');
-}
-
-
-function login_form()
+function goto_menu($user_type)
 {
-    header('Location: new_user_form.html'); 
+	$basic_menu="base";
+	$student_extras="student";
+	$recruiter_extras="recruit";
+	if($user_type == "Recruiter")
+		echo $basic_menu.$recruiter_extras;
+	if($user_type == "Student")
+		echo $basic_menu.$student_extras;
 }
-
-function goto_menu()
-{
-}
-
 function main()
 {
-    check_user();
-    goto_menu($user_type);
+	$user_type= $_POST["user_type"];
+	goto_menu($user_type);
 }
 
 main();
-
 ?>
-    </body></html>
