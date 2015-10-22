@@ -13,5 +13,5 @@ function check_user(){
     else
         echo "error, please try again<br>";
 }
-
+check_user();
 ?>
