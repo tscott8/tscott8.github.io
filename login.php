@@ -3,8 +3,6 @@ if(isset($_SESSION['logged_in'];))
 {
 header("location: SuperRecruiter.php");
 }
-	//call login function here
-	//$_SESSION['logged_in']=$username_email;
 function check_existence()
 {
 	return true;
