@@ -9,7 +9,6 @@ body {
 	color: White;
 }
 
-
 #navbar nav {
 	background-color: black;
 	position: fixed;
@@ -89,6 +88,7 @@ a:active {
 	width: 50%;
    border-collapse: collapse;
 }
+
 #impact {
    font-size: 150%;
    font-family: "Trebuchet MS";
@@ -116,3 +116,4 @@ a:active {
 	line-height: 15px;
    font-family: verdana;
 }
+

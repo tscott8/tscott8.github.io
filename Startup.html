@@ -1,14 +1,26 @@
-<html>
-    <head>
-    </head>
-    <body>
-		<form method="post" action="Startup.php">
-        	Welcome to Super Recruiter!<br>
-        	The app to help you get a job...<br><br>
+<!DOCTYPE html>
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="SuperRecruiter.css"/>
+	<title>SuperRecruiter Startup</title>
+</head>
+
+    <body class="center">
+		<form  class="myform" id="startup" method="post" action="Startup.php">
+			<p><h2>Welcome to Super Recruiter!</h2><br>
+				The app to help you get a job...<br><br></p>
 			<fieldset>
 			<legend>Are you a new user?</legend>
-            	<button type="submit" name="q1" value="yes">Yes</button> 
-            	<button type="submit" name="q1" value="no">No</button><br>
+				<ul>
+					<li>
+						<button type="submit" name="q1" value="yes">Yes</button>
+					</li> 
+					<li>
+						<button type="submit" name="q1" value="no">No</button>
+					</li>
+				</ul>
 			</fieldset>
             </form>
     </body>

@@ -1,0 +1,35 @@
+.center {
+	margin-right: auto;
+	margin-left: auto;
+	margin-top:5%;
+    width: 90%;
+}
+.myform h2 {
+	color:darkcyan;
+}
+.myform p {
+	max-width: inherit;
+}
+.myform fieldset {
+	max-width: inherit;
+}
+.myform ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.myform li{
+	padding: .5%;
+}
+.asterisk {
+	color:red;
+	font-size: 150%;
+	vertical-align: top;
+ 
+}
+body {
+   background-image: url("background.jpg");
+   background-size: cover;
+color: White;
+}
