@@ -11,7 +11,7 @@ function goto_menu($user_type)
 }
 function main()
 {
-	$user_type= $_POST["user_type"];
+	$user_type=$_SESSION['user_type'];
 	goto_menu($user_type);
 }
 
