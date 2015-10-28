@@ -14,7 +14,8 @@ session_start();
 		<title>" . $user_type . " Menu</title>
 	</head>
 	<body>
-		<form class=\"myform\" id=\"menu\" action=\"menu_handler.php\" method=\"post\">
+		<fieldset class=\"myform\" >
+		<form id=\"menu\" action=\"menu_handler.php\" method=\"post\">
 		<fieldset>
 			<legend>" . $user_type . " Menu</legend>
 			What would you like to do?
@@ -26,6 +27,7 @@ session_start();
 			</ul>
 		</fieldset>
 	</form>
+	</fieldset>
 </body>
 </html>";
 echo $menu;
