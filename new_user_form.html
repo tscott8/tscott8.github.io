@@ -1,9 +1,10 @@
 <?php
-if (isset($_POST["submit"]){
+session_start();
+if (isset($_POST['submit']){
 header("location: login.php");
 }
-if(isset($_SESSION["logged_in"])){
-header("location: SuperRecruiter.php");
+if(isset($_SESSION['logged_in'])){
+header("location: menu.php");
 }
 ?>
 

@@ -1,10 +1,12 @@
 <?php
+session_start();
 if(isset($_SESSION['logged_in'])){
-header("location: SuperRecruiter.php");
+header("location: menu.php");
 }
 
 function register_user()
 {
+//get form variables
 $first_name = $_POST["first_name"];
 $last_name = $_POST["last_name"];
 $phone = $_POST["phone"];
@@ -14,16 +16,13 @@ $skills = "";
 if($user_type == "Student")
 {
 	$major = $_POST["major"];
-	$skills =$_POST["skills"];
+	$skills = $_POST["skills"];
 }
 $username_email = $_POST["email"];
 $password = $_POST["password"];
 $password_confirm = $_POST["password_confirm"];
 
-echo "<bodyThe following info for user: " . $username_email . "will be inserted into the database<br>";
-echo "<table><tr><th>Username</th><th>Password</th><th>First</th><th>Last</th><th>Phone</th></tr>";
-echo "<tr><td>" . $username_email . "</td><td>" . $password . "</td><td>" . $first_name."</td><td>" . $last_name . "</td><td>" . $phone . "</td></tr></table></body>";
-
+//connect and insert into db
 try
 {
    $user = 'tyler';
@@ -44,7 +43,7 @@ catch (PDOException $ex)
 }
 function go_to_login()
 {
-	$_SESSION['login_user']=$username_email;
+	$_SESSION['login_user'] = $username_email;
 	header("location: login.php");	
 }
 function main()

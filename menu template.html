@@ -1,0 +1,27 @@
+?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="SuperRecruiter.css"/>
+		<title>" . $menu_type . "Menu</title>
+	</head>
+	<body>
+		<form id="menu" action="SuperRecruiter.php" method="post">
+		<fieldset>
+			<legend>" . $menu_type . "Menu</legend>
+			What would you like to do?
+			<ul>
+				<li><button type="button" id="search" name="search">Search For a Candidate</button>
+				<li><button type="button" id="update" name="update">Update Profile</button>
+				<li><button type="button" id="delete" name="delete">Delete Profile</button>
+				<li><button type="button" id="browse" name="browse">Browse Profiles</button>
+				<li><input type="submit"></li>
+			</ul>
+		</fieldset>
+	</form>
+</body>
+</html>

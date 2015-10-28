@@ -1,41 +1,69 @@
 <?php
+session_start();
 if(isset($_SESSION['logged_in']))
 {
-header("location: SuperRecruiter.php");
+	header("location: menu.php");
 }
-function check_existence()
+
+function connect_to_db()
 {
+	$conn="";
+	try
+	{
+	   $user = 'tyler';
+	   $password = 'password';
+	   $conn = new PDO('mysql:host=127.3.233.130:3306;dbname=resume_db', $user, $password);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	}
+	catch (PDOException $ex) 
+	{
+	   echo 'Error!: ' . $ex->getMessage();
+	   die(); 
+	}
+	return $conn;
+}
+
+function check_existence($db)
+{
+	//if exists
 	return true;
+	//else false
 }
 function login_user()
 {
-	$_SESSION['logged_in']=$_SESSION['login_user'];
+	$username="";
+	if(isset($_SESSION['login_user']))
+	{
+		$username = $_SESSION['login_user'];
+	}
+	else 
+	{
+		$username = $_POST["username"];
+	}
+	return $username;
 }
-function get_user_type()
+function get_user_type($login, $db)
 {
-try
-{
-   $user = 'tyler';
-   $password = 'password'; 
-   $db = new PDO('mysql:host=127.3.233.130:3306;dbname=resume_db', $user, $password);
-   $_SESSION('user_type') = $db->query('SELECT user_type, FROM users WHERE username = $_SESSION['logged_in']');
-}
-catch (PDOException $ex) 
-{
-   echo 'Error!: ' . $ex->getMessage();
-   die(); 
-}
-
+	$sql = "SELECT user_type FROM users WHERE username = '".$login."'";
+	echo $sql . "<br>";
+	$user_type = $db->query($sql);
+	//$_SESSION('user_type') = $user_type;
+	$_SESSION['user_type'] = "Student";
 }
 function go_to_menu()
 {
-	header("location: SuperRecruiter.php");
+	header("location: menu.php");
 }
 function main()
 {
-	if(check_existence()==true) 
+	$db = connect_to_db();
+	if(check_existence($db) == true) 
 	{
-		login_user();
+		$login = login_user();
+		get_user_type($login, $db);
+		$_SESSION['logged_in'] = true;
+		echo $_SESSION['user_type'];
+		echo $_SESSION['logged_in'];
 		go_to_menu();
 	}
 	else 
