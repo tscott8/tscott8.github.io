@@ -80,9 +80,10 @@ header("location: menu.php");
         </script>
     </head>
     <body class="center" onload="check_user_type()">
-        <form class="myform" id="register" action="create_new_user.php" method="post" onsubmit="return checkForm()">
-            <fieldset>
-            <legend>Create your SuperRecruiter account</legend>
+		<fieldset class="myform">
+		<legend>Create your SuperRecruiter account</legend>
+        <form id="register" action="create_new_user.php" method="post" onsubmit="return checkForm()"> 
+            
 				<span style="color:red">*required</span>
             <ul>
                 <li>First Name:
@@ -111,13 +112,13 @@ header("location: menu.php");
 						<option value="CE">Civil Engineering</option>
 						<option value="CIT">CIT</option>
 						<option value="Physics">Physics</option>
-					</select><span style="color:red">*</span>
+					</select><span class="asterisk">*</span>
 				</li>
 				<li style="display:none" id="skills">Please list your skills:
 					<!--dynamic unfolding list would be nice-->
 					<br><textarea rows="10" cols="30"></textarea><span class="asterisk">*</span>
 				</li>
-				<li>Email <span style="color:green; text-transform:uppercase;">(this will be your username):</span>
+				<li>Email: <span style="color:green; text-transform:uppercase; font-size:75%;">(this will be your username)</span>
                     <br><input type="email" id="email" name="email" onchange="clear_message()" placeholder="Enter a valid Email"/><span class="asterisk">*</span>
                     <div id="email_message" style="color:Red"></div></li>
                 <li>Password:
@@ -126,9 +127,9 @@ header("location: menu.php");
                 <li>Confirm Password:
                     <br><input type="password" id="password_confirm" name="password_confirm" onchange="clear_message(); checkPassMatch();" placeholder="Enter your Password again"/><span class="asterisk">*</span>
                     <div id="match_message" style="color:Red"></div></li>
-                <li><input type="submit"/></li>
+			<li><button type="submit" name="submit"/>Create User</button></li>
             </ul>
+			</form>
             </fieldset>
-        </form>
     </body>
 </html>

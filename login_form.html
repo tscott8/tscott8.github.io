@@ -5,21 +5,22 @@ header("location: menu.php");
 }
 ?>
 <html>
-<body>
+<body class="center">
 	<head>
 	<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="SuperRecruiter.css"/>
 		<title>Login</title>
 	</head>
-	<form class="myform" id="login" action="login.php" method="post">
-		<fieldset>
+		<fieldset class="myform">
 			<legend>Welcome Back!</legend>
-			Please Login
+			<form id="login" action="login.php" method="post">
+				Please Login
 			<ul>
-				<li>Username:<input type="email" id="username" name="username" required></li>
-				<li>Password:<input type="password" id="password" name="password" required></li>
-				<li><input type="submit"></li>
+				<li>Username: <input type="email" id="username" name="username" required></li>
+				<li>Password: <input type="password" id="password" name="password" required></li>
+				<li><button type="submit">Login</button></li>
 			</ul>
-		</fieldset>
-	</form>
+			</form>
+	</fieldset>
+
 </body></html>
