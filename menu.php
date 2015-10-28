@@ -13,7 +13,7 @@ session_start();
 		<link rel=\"stylesheet\" type=\"text/css\" href=\"SuperRecruiter.css\"/>
 		<title>" . $user_type . " Menu</title>
 	</head>
-	<body>
+	<body class=\"center\">
 		<fieldset class=\"myform\" >
 		<form id=\"menu\" action=\"menu_handler.php\" method=\"post\">
 		<fieldset>
