@@ -13,6 +13,8 @@
 	border-color: aqua;
 	border-width: medium;
 	font-size: 105%;
+	max-width: 70%;
+	margin: inherit;
 }
 .myform fieldset{
 	max-width: inherit;
