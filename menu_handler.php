@@ -64,6 +64,7 @@ function update()
 
 	echo "<script>console.log('info: ".$_SESSION['username_update']."')</script>"; 
 	//pull account info to use on next page
+	$db=null;
 	header("location: update_form.php");
 }
 function delete()

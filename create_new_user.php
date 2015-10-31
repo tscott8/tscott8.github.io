@@ -46,6 +46,7 @@ function register_user()
 	   echo 'Error!: ' . $ex->getMessage();
 	   die(); 
 	}
+	$db = null;
 }
 function main()
 {
