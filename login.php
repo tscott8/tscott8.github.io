@@ -69,7 +69,7 @@ function verify_password($username, $password, $db)
 	}*/
 	
 	//cheat way
-	if($hash[0] === $password){
+	if($hash[0] == $password){
 		return true;
 	}
 	else {
