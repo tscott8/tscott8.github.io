@@ -58,10 +58,7 @@ function update()
 	$_SESSION['phone_update'] = $info[6];
 	$_SESSION['major_update'] = $info[7];
 	$_SESSION['skills_update'] = $info[8];
-
-	echo "<script>console.log('info: ".$_SESSION['username_update']."')</script>"; 
 	//pull account info to use on next page
-	$db=null;
 	header("location: update_form.php");
 }
 function delete()

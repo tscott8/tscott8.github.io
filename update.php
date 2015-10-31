@@ -57,7 +57,6 @@ function update()
 		echo 'Error!: ' . $ex->getMessage();
 	   	die(); 
 	}
-	$db=null;
 }
 function main()
 {
