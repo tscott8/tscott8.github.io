@@ -123,7 +123,7 @@ function browse($db)
 		echo '<td>' . $row['major']. '</td>';
 		echo '<td>' . $row['user_id']. '</td>';
 		echo '<td>' . $row['skills']. '</td>';
-		echo '</tr>'
+		echo '</tr>';
 	}
 	echo '</table></body></html>';
 	//displays all the people in the db
