@@ -1,3 +1,4 @@
+
 .center {
 	margin-right: auto;
 	margin-left: auto;
@@ -13,7 +14,8 @@
 	border-color: aqua;
 	border-width: medium;
 	font-size: 105%;
-	max-width: 30%;
+	min-width: 20em;
+	max-width: 30em;
 	margin: inherit;
 }
 .myform fieldset{
@@ -33,9 +35,10 @@
 	margin: 0;
 	overflow: hidden;
 	padding: .5%;
+	width:100%;
 }
 
-.myform input, textarea, button, select, option {
+.myform input, textarea, button, select, option{
 	border-radius: 5px;
 	border-width: medium;
 	border-color: aqua;
@@ -43,15 +46,20 @@
 	color:gray;
 	font-family: inherit;
 	padding: .25%;
-	min-width: 17.5%;
 	box-sizing:border-box;
-	width:50%;
+	width:97%;
+	resize: none;
 }
 .asterisk {
 	color:red;
 	font-size: 150%;
 	vertical-align: top;
 }
+.message {
+	color:red;
+	font-size:75%;
+}
+.animate{}
 body {
    background-image: url("background.jpg");
    background-size: cover;

@@ -1,6 +1,25 @@
 <?php
 session_start();
-
+//if($_SESSION['logged_in']!=true){
+//header("location: startup.html");
+//}
+function connect_to_db()
+{
+	$conn="";
+	try
+	{
+	   $dbuser = 'tyler';
+	   $dbpassword = 'password';
+	   $conn = new PDO('mysql:host=127.3.233.130:3306;dbname=resume_db', $dbuser, $dbpassword);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	}
+	catch (PDOException $ex) 
+	{
+	   echo 'Error!: ' . $ex->getMessage();
+	   die(); 
+	}
+	return $conn;
+}
 function search()
 {
 	echo "in search";
@@ -10,9 +29,42 @@ function search()
 }
 function update()
 {
-	echo "in update";
-	//need to pull account info and set session variables to pass to update.html
-	header("location: update.html");
+	$db = connect_to_db();
+	try
+	{	
+		$sql = "SELECT * FROM users WHERE username = :username";
+		$statement = $db->prepare($sql);
+		$statement->bindValue(':username', $_SESSION['login_user']);
+		$statement->execute();
+		$info = $statement->fetch();
+		$statement->closeCursor();
+	}
+	catch (PDOException $ex) 
+	{
+		echo 'Error!: ' . $ex->getMessage();
+	   	die(); 
+	}
+	echo "<script>console.log('info: ".$info[1]."')</script>";
+	echo "<script>console.log('info: ".$info[2]."')</script>";
+	echo "<script>console.log('info: ".$info[3]."')</script>";
+	echo "<script>console.log('info: ".$info[4]."')</script>";
+	echo "<script>console.log('info: ".$info[5]."')</script>";
+	echo "<script>console.log('info: ".$info[6]."')</script>";
+	echo "<script>console.log('info: ".$info[7]."')</script>";
+	echo "<script>console.log('info: ".$info[8]."')</script>";
+
+	$_SESSION['username_update'] = $info[1];
+	$_SESSION['password_update'] = $info[2];
+	$_SESSION['first_name_update'] = $info[3];
+	$_SESSION['last_name_update'] = $info[4];
+	$_SESSION['user_type_update'] = $info[5];
+	$_SESSION['phone_update'] = $info[6];
+	$_SESSION['major_update'] = $info[7];
+	$_SESSION['skills_update'] = $info[8];
+
+	echo "<script>console.log('info: ".$_SESSION['username_update']."')</script>"; 
+	//pull account info to use on next page
+	header("location: update_form.php");
 }
 function delete()
 {

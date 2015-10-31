@@ -14,60 +14,65 @@ header("location: menu.php");
         <script type="text/javascript">
             function checkForm()
 			{ 
+				var return_val = true;
                 if(document.getElementById("first_name").value == "")
                 {
 					document.getElementById("first_name_message").innerHTML = "Enter your First Name.";
-					document.getElementById("first_name").focus();
-					return false;
+					return_val = false;
                 }
+				else
+					clear_message("first_name");
                 if(document.getElementById("last_name").value == "")
                 {
 					document.getElementById("last_name_message").innerHTML = "Enter your Last Name";
-					document.getElementById("last_name").focus();
-					return false;
+					return_val = false;
                 }
-				if(document.getElementById("user_type").value == "")
+				else
+					clear_message("last_name");
+				if(document.getElementById("user_type").value == "- Select User Type -")
                 {
 					document.getElementById("user_type_message").innerHTML = "Select a user type";
-					document.getElementById("user_type").focus();
-					return false;
+					return_val = false;
                 }
+				else
+					clear_message("user_type");
                 if(document.getElementById("username").value == "")
                 {
 					document.getElementById("username_message").innerHTML = "Enter your Email";
-					document.getElementById("username").focus();
-					return false;
+					return_val = false;
                 }
+				else
+					clear_message("username");
                 if(document.getElementById("password").value == "")
                 {
 					document.getElementById("password_message").innerHTML = "Enter a Password";
-					document.getElementById("password").focus();
-					return false;
+					return_val = false;
                 }
+				else
+					clear_message("password");
                 if(checkPassMatch() == false)
 				{
 					document.getElementById("password_confirm").focus();
-					return false;
+					return_val = false;
                 }
+				else
+					clear_message("password_confirm");
+				return return_val;
             }
             function checkPassMatch()
 			{
 				if(document.getElementById("password").value != document.getElementById("password_confirm").value)
                 {
-                	document.getElementById("match_message").innerHTML = "passwords do not match!";
+                	document.getElementById("password_confirm_message").innerHTML = "passwords do not match!";
                     return false;
                 }
                 else
                     return true;
             }
-            function clear_message()
+            function clear_message(message_to_clear)
 			{           
-                document.getElementById("first_name_message").innerHTML = "";
-				document.getElementById("last_name_message").innerHTML = "";
-				document.getElementById("phone_message").innerHTML = "";
-				document.getElementById("email_message").innerHTML = "";
-				document.getElementById("password_message").innerHTML = "";
-				document.getElementById("match_message").innerHTML = "";
+				var string = message_to_clear + "_message";
+                document.getElementById(string).innerHTML = "";
             }
 			function check_user_type()
 			{
@@ -90,27 +95,27 @@ header("location: menu.php");
 		<legend>Create your SuperRecruiter account</legend>
         <form id="register" action="create_new_user.php" method="post" onsubmit="return checkForm()"> 
             
-				<span style="color:red">*required</span>
+				<span class="message" >*required</span>
             <ul>
                 <li>First Name:
-					<br><input type="text" id="first_name" name="first_name" onchange="clear_message()" placeholder="Enter a valid First Name" /><span class="asterisk">*</span>
-                    <div id="first_name_message" style="color:Red"></div></li>
+					<br><input type="text" id="first_name" name="first_name" onchange="checkForm()" placeholder="Enter a valid First Name" /><span class="asterisk">*</span>
+                    <div class="message" id="first_name_message" ></div></li>
                 <li>Last Name:
-                    <br><input type="text" id="last_name" name="last_name" onchange="clear_message()" placeholder="Enter a valid Last Name" /><span class="asterisk">*</span>
-                    <div id="last_name_message" style="color:Red"></div></li>
+                    <br><input type="text" id="last_name" name="last_name" onchange="checkForm()" placeholder="Enter a valid Last Name" /><span class="asterisk">*</span>
+                    <div class="message" id="last_name_message" ></div></li>
                 <li>Contact Number:
-                    <br><input type="tel"  pattern="[0-9]*" id="phone" name="phone" onchange="clear_message()" placeholder="Enter a valid Phone Number"/>
-                    <div id="phone_message" style="color:Red"></div></li>
+                    <br><input type="tel"  pattern="[0-9]*" id="phone" name="phone" onchange="checkForm()" placeholder="Enter a valid Phone Number"/>
+                    <div class="message" id="phone_message" ></div></li>
 				<li>Select type of user:
-                    <br><select id="user_type" name="user_type" onchange="check_user_type()">
-						<option></option>
+                    <br><select id="user_type" name="user_type" onchange="check_user_type(); checkForm()">
+						<option>- Select User Type - </option>
 						<option value="Student">Student</option>
 						<option value="Recruiter">Recruiter</option>
 					</select><span class="asterisk">*</span>
-				 <div id="user_type_message" style="color:Red"></div></li></li>
+				 <div class="message" id="user_type_message"></div></li></li>
 				<li style="display:none" id="major_selector">Select a Major:
 					<br><select id="major" name="major">
-						<option></option>
+						<option>- Select Major - </option>
 						<option value="CS">Computer Science</option>
 						<option value="CompE">Computer Engineering</option>
 						<option value="EE">Electrical Engineering</option>
@@ -125,14 +130,14 @@ header("location: menu.php");
 					<br><textarea name="skills"rows="10" cols="30"></textarea><span class="asterisk">*</span>
 				</li>
 				<li>Email: <span style="color:green; text-transform:uppercase; font-size:75%;">(this will be your username)</span>
-                    <br><input type="email" id="username" name="username" onchange="clear_message()" placeholder="Enter a valid Email"/><span class="asterisk">*</span>
-                    <div id="username_message" style="color:Red"></div></li>
+                    <br><input type="email" id="username" name="username" onchange="checkForm()" placeholder="Enter a valid Email"/><span class="asterisk">*</span>
+                    <div class="message" id="username_message" ></div></li>
                 <li>Password:
-                    <br><input type="password" id="password" name="password" onchange="clear_message()" placeholder="Enter a valid Password" /><span class="asterisk">*</span>
-                    <div id="password_message" style="color:Red"></div></li>
+                    <br><input type="password" id="password" name="password" onchange="checkForm()" placeholder="Enter a valid Password" /><span class="asterisk">*</span>
+                    <div class="message" id="password_message"></div></li>
                 <li>Confirm Password:
-                    <br><input type="password" id="password_confirm" name="password_confirm" onchange="clear_message(); checkPassMatch();" placeholder="Enter your Password again"/><span class="asterisk">*</span>
-                    <div id="match_message" style="color:Red"></div></li>
+                    <br><input type="password" id="password_confirm" name="password_confirm" onchange="checkForm(); checkPassMatch();" placeholder="Enter your Password again"/><span class="asterisk">*</span>
+                    <div class="message" id="password_confirm_message"></div></li>
 			<li><button type="submit" name="submit"/>Create User</button></li>
             </ul>
 			</form>

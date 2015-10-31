@@ -1,5 +1,7 @@
 <?php
+session_destroy();
 session_start();
+
 function check_user(){
     $value = $_POST["q1"];
     if($value == "yes")

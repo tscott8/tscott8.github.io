@@ -1,5 +1,8 @@
 <?php
 session_start();
+if($_SESSION['logged_in']!=true){
+header("location: startup.html");
+}
 function goto_menu($user_type)
 {
 	$menu="<?php

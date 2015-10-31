@@ -128,7 +128,7 @@ function login_user()
 		echo "<script>console.log('password is: ".$password."')</script>";
 		return false;
 	}
-	
+	$db = null;
 	return true;
 }
 
@@ -145,7 +145,7 @@ function main()
 	}
 	else 
 	{
-	//	header("location:login_form.html");
+	header("location:login_form.html");
 	}
 }
 main();
