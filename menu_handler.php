@@ -126,7 +126,6 @@ function browse($db)
 		echo '<td>' . $row['username']. '</td>';
 		echo '<td>' . $row['phone']. '</td>';
 		echo '<td>' . $row['major']. '</td>';
-		echo '<td>' . $row['major']. '</td>';
 		echo '<td>' . $row['skills']. '</td>';
 		echo '</tr>';
 	}
