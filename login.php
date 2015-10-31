@@ -145,7 +145,7 @@ function main()
 	}
 	else 
 	{
-	//header("location:login_form.html");
+	header("location:login_form.html");
 	}
 }
 main();
