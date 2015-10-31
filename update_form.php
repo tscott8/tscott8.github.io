@@ -21,6 +21,20 @@ echo "<script>console.log('info: ".$_SESSION['username_update']."')</script>";
 				document.getElementById("password").value = "<?php echo $_SESSION['password_update'];?>";
 				document.getElementById("password_confirm").value = "<?php echo $_SESSION['password_update'];?>";
 			}
+			function check_user_type()
+			{
+				if(document.getElementById("user_type").value == "Student")
+				{
+					document.getElementById("major_selector").style.display = '';
+					document.getElementById("skills").style.display = '';
+			
+				}
+				else 
+				{
+					document.getElementById("major_selector").style.display = 'none';
+					document.getElementById("skills").style.display = 'none';
+				}
+			}
         </script>
     </head>
     <body class="center" onload="autofill()">
