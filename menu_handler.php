@@ -24,7 +24,7 @@ function search()
 {
 	echo "in search";
 	//need to display fancy options in the html
-	header("location: search.html");
+	header("location: search.php");
 
 }
 function update()
@@ -104,9 +104,25 @@ echo $menu;
 }
 function browse()
 {
+	$db = connect_to_db();
+	echo '<table><tr><th>ID</th><th>First</th><th>Last</th><th>Type</th><th>Email</th>Phone</th><th>Major</th><th>Skills</th></tr>';
+	foreach ($db->query('SELECT * FROM users') as $row)
+	{	
+		echo '<tr>';
+		echo '<td>' . $row['user_id']. '</td>';
+		echo '<td>' . $row['first_name']. '</td>';
+		echo '<td>' . $row['last_name']. '</td>';
+		echo '<td>' . $row['user_type']. '</td>';
+		echo '<td>' . $row['username']. '</td>';
+		echo '<td>' . $row['phone']. '</td>';
+		echo '<td>' . $row['major']. '</td>';
+		echo '<td>' . $row['user_id']. '</td>';
+		echo '<td>' . $row['skills']. '</td>';
+		echo '</tr>'
+	}
+	echo '</table>';
 	echo "in browse";
 	//displays all the people in the db
-
 }
 
 function handle_menu()
