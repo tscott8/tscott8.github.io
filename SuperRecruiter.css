@@ -55,6 +55,14 @@
 	width:97%;
 	resize: none;
 }
+.myform table,tr,th,td {
+	border-radius: 5px;
+	border-width: medium;
+	border-color: aqua;
+	background-color: black;
+	color:gray;
+	font-family: inherit;
+}
 .asterisk {
 	color:red;
 	font-size: 150%;
