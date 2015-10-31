@@ -7,7 +7,7 @@ echo "<script>console.log('info: ".$_SESSION['username_update']."')</script>";
     <head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="SuperRecruiter.css"/>
-		<title>New User Creation</title>
+		<title>Update account</title>
         <script> 
 			function autofill()
 			{		
@@ -71,7 +71,7 @@ echo "<script>console.log('info: ".$_SESSION['username_update']."')</script>";
                 <li>Confirm Password:
                     <br><input type="password" id="password_confirm" name="password_confirm" onchange="checkForm(); checkPassMatch();" placeholder="Enter your Password again"/><span class="asterisk">*</span>
                     <div class="message" id="password_confirm_message"></div></li>
-			<li><br><button type="submit" name="submit"/>Create User</button></li>
+			<li><br><button type="submit" name="submit"/>Update User</button></li>
             </ul>
 			</form>
             </fieldset>

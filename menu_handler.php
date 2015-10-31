@@ -1,8 +1,8 @@
 <?php
 session_start();
-//if($_SESSION['logged_in']!=true){
-//header("location: startup.html");
-//}
+if(!isset($_SESSION['logged_in'])){
+header("location: startup.html");
+}
 function connect_to_db()
 {
 	$conn="";
@@ -69,7 +69,37 @@ function update()
 }
 function delete()
 {
-	echo "in delete";
+	$menu="<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset=\"UTF-8\">
+		<link rel=\"stylesheet\" type=\"text/css\" href=\"SuperRecruiter.css\"/>
+		<title>Confirm Deletion</title>
+	</head>
+	<body class=\"center\">
+		<fieldset class=\"myform\" >
+		<legend>Confirm Deletion</legend>
+		<form id=\"menu\" action=\"delete.php\" method=\"post\">
+		<fieldset>
+			<legend>Do you really want to delete your account?</legend>
+			<ul>
+				<li>
+						<button type=\"submit\" name=\"q2\" value=\"yes\">Yes</button>
+					</li> 
+					<li>
+						<br><button type=\"submit\" name=\"q2\" value=\"no\">No</button>
+					</li>
+			</ul>
+		</fieldset>
+	</form>
+	</fieldset>
+</body>
+</html>";
+echo $menu;
 	//maybe echo confirm then deletes your account
 }
 function browse()
