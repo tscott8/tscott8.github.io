@@ -24,9 +24,9 @@ function search()
 	header("location: search.php");
 
 }
-function update()
+function update($db)
 {
-	$db = connect_to_db();
+	
 	try
 	{	
 		$sql = "SELECT * FROM users WHERE username = :username";
@@ -63,7 +63,7 @@ function update()
 }
 function delete()
 {
-	$menu="<?php
+	$deleter="<?php
 session_start();
 ?>
 
@@ -93,14 +93,25 @@ session_start();
 	</fieldset>
 </body>
 </html>";
-echo $menu;
-	//maybe echo confirm then deletes your account
+echo $deleter;
 }
-function browse()
+function browse($db)
 {
-	$db = connect_to_db();
-	echo '<table><tr><th>ID</th><th>First</th><th>Last</th><th>Type</th><th>Email</th>Phone</th><th>Major</th><th>Skills</th></tr>';
-	foreach ($db->query('SELECT * FROM users') as $row)
+	try
+	{	
+		$sql = "SELECT * FROM users";
+		$statement = $db->prepare($sql);
+		$statement->execute();
+		$read = $statement->fetch();
+		$statement->closeCursor();
+	}
+	catch (PDOException $ex) 
+	{
+		echo 'Error!: ' . $ex->getMessage();
+	   	die(); 
+	}
+	echo '<html><body><table><tr><th>ID</th><th>First</th><th>Last</th><th>Type</th><th>Email</th>Phone</th><th>Major</th><th>Skills</th></tr>';
+	foreach ($db->query($sql) as $row)
 	{	
 		echo '<tr>';
 		echo '<td>' . $row['user_id']. '</td>';
@@ -114,24 +125,26 @@ function browse()
 		echo '<td>' . $row['skills']. '</td>';
 		echo '</tr>'
 	}
-	echo '</table>';
-	echo "in browse";
+	echo '</table></body></html>';
 	//displays all the people in the db
+	$db=null;
 }
 
 function handle_menu()
 {
+$db = connect_to_db();
 if($_POST["menu_select"] == "search")
 	search();
 if($_POST["menu_select"] == "update")
-	update();
+	update($db);
 if($_POST["menu_select"] == "delete")
 	delete();
 if($_POST["menu_select"] == "browse")
-	browse();
+	browse($db);
 }
 function main()
 {
+	
 	handle_menu();
 }
 main();
