@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo "<script>console.log('info: ".$_SESSION['username_update']."')</script>"; 
 ?>
 <!DOCTYPE html>
 <html>
@@ -37,7 +36,7 @@ echo "<script>console.log('info: ".$_SESSION['username_update']."')</script>";
 			}
         </script>
     </head>
-    <body class="center" onload="autofill(); check_user_type()">
+    <body class="center" onload="autofill()">
 		<fieldset class="myform">
 		<legend>Update your SuperRecruiter account</legend>
         <form id="update" action="update.php" method="post" onsubmit="return checkForm()"> 
