@@ -110,12 +110,12 @@ function browse($db)
 		echo 'Error!: ' . $ex->getMessage();
 	   	die(); 
 	}
-	echo '<head>
+	echo "<head>
 	<meta charset=\"UTF-8\">
 	<link rel=\"stylesheet\" type=\"text/css\" href=\"SuperRecruiter.css\"/>
 	<title>Browse</title>
 </head><body class=\"center\"><fieldset class=\"myform\"><legend>Database Entries</legend>
-	<table><tr><th>ID</th><th>First</th><th>Last</th><th>Type</th><th>Email</th><th>Phone</th><th>Major</th><th>Skills</th></tr>';
+	<table><tr><th>ID</th><th>First</th><th>Last</th><th>Type</th><th>Email</th><th>Phone</th><th>Major</th><th>Skills</th></tr>";
 	foreach ($db->query($sql) as $row)
 	{	
 		echo '<tr>';
@@ -130,7 +130,7 @@ function browse($db)
 		echo '<td>' . $row['skills']. '</td>';
 		echo '</tr>';
 	}
-	echo '</table></fieldset></body></html>';
+	echo "</table></fieldset></body></html>";
 	//displays all the people in the db
 	$db=null;
 }
