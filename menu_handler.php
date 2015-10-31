@@ -1,8 +1,5 @@
 <?php
 session_start();
-if(!isset($_SESSION['logged_in'])){
-header("location: startup.html");
-}
 function connect_to_db()
 {
 	$conn="";
