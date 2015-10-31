@@ -57,12 +57,12 @@ function update()
 		echo 'Error!: ' . $ex->getMessage();
 	   	die(); 
 	}
+	$db=null
+	header("location: menu.php");
 }
 function main()
 {
 	update();
-	header("location: menu.php");
-
 }
 main();
 ?>
