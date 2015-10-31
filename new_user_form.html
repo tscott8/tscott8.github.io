@@ -52,7 +52,6 @@ header("location: menu.php");
 					clear_message("password");
                 if(checkPassMatch() == false)
 				{
-					document.getElementById("password_confirm").focus();
 					return_val = false;
                 }
 				else
@@ -98,16 +97,16 @@ header("location: menu.php");
 				<span class="message" >*required</span>
             <ul>
                 <li>First Name:
-					<br><input type="text" id="first_name" name="first_name" onchange="checkForm()" placeholder="Enter a valid First Name" /><span class="asterisk">*</span>
+					<br><input type="text" id="first_name" name="first_name" onblur="checkForm()" placeholder="Enter a valid First Name" /><span class="asterisk">*</span>
                     <div class="message" id="first_name_message" ></div></li>
                 <li>Last Name:
-                    <br><input type="text" id="last_name" name="last_name" onchange="checkForm()" placeholder="Enter a valid Last Name" /><span class="asterisk">*</span>
+                    <br><input type="text" id="last_name" name="last_name" onblur="checkForm()" placeholder="Enter a valid Last Name" /><span class="asterisk">*</span>
                     <div class="message" id="last_name_message" ></div></li>
                 <li>Contact Number:
-                    <br><input type="tel"  pattern="[0-9]*" id="phone" name="phone" onchange="checkForm()" placeholder="Enter a valid Phone Number"/>
+                    <br><input type="tel"  pattern="[0-9]*" id="phone" name="phone" onblur="checkForm()" placeholder="Enter a valid Phone Number"/>
                     <div class="message" id="phone_message" ></div></li>
 				<li>Select type of user:
-                    <br><select id="user_type" name="user_type" onchange="check_user_type(); checkForm()">
+                    <br><select id="user_type" name="user_type" onblur="check_user_type(); checkForm()">
 						<option>- Select User Type - </option>
 						<option value="Student">Student</option>
 						<option value="Recruiter">Recruiter</option>
@@ -130,13 +129,13 @@ header("location: menu.php");
 					<br><textarea name="skills"rows="10" cols="30"></textarea><span class="asterisk">*</span>
 				</li>
 				<li>Email: <span style="color:green; text-transform:uppercase; font-size:75%;">(this will be your username)</span>
-                    <br><input type="email" id="username" name="username" onchange="checkForm()" placeholder="Enter a valid Email"/><span class="asterisk">*</span>
+                    <br><input type="email" id="username" name="username" onblur="checkForm()" placeholder="Enter a valid Email"/><span class="asterisk">*</span>
                     <div class="message" id="username_message" ></div></li>
                 <li>Password:
-                    <br><input type="password" id="password" name="password" onchange="checkForm()" placeholder="Enter a valid Password" /><span class="asterisk">*</span>
+                    <br><input type="password" id="password" name="password" onblur="checkForm()" placeholder="Enter a valid Password" /><span class="asterisk">*</span>
                     <div class="message" id="password_message"></div></li>
                 <li>Confirm Password:
-                    <br><input type="password" id="password_confirm" name="password_confirm" onchange="checkForm(); checkPassMatch();" placeholder="Enter your Password again"/><span class="asterisk">*</span>
+                    <br><input type="password" id="password_confirm" name="password_confirm" onblur="checkForm(); checkPassMatch();" placeholder="Enter your Password again"/><span class="asterisk">*</span>
                     <div class="message" id="password_confirm_message"></div></li>
 			<li><button type="submit" name="submit"/>Create User</button></li>
             </ul>
