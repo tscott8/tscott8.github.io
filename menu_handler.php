@@ -113,7 +113,7 @@ function browse($db)
 	echo '<head>
 	<meta charset=\"UTF-8\">
 	<link rel=\"stylesheet\" type=\"text/css\" href=\"SuperRecruiter.css\"/>
-	<title>Brows</title>
+	<title>Browse</title>
 </head><body class=\"center\"><fieldset class=\"myform\"><legend>Database Entries</legend>
 	<table><tr><th>ID</th><th>First</th><th>Last</th><th>Type</th><th>Email</th><th>Phone</th><th>Major</th><th>Skills</th></tr>';
 	foreach ($db->query($sql) as $row)
@@ -126,7 +126,7 @@ function browse($db)
 		echo '<td>' . $row['username']. '</td>';
 		echo '<td>' . $row['phone']. '</td>';
 		echo '<td>' . $row['major']. '</td>';
-		echo '<td>' . $row['user_id']. '</td>';
+		echo '<td>' . $row['major']. '</td>';
 		echo '<td>' . $row['skills']. '</td>';
 		echo '</tr>';
 	}
