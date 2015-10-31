@@ -13,7 +13,7 @@
 	padding:1%;
 	border-color: aqua;
 	border-width: medium;
-	font-size: 105%;
+	font-size: 100%;
 	min-width: 20em;
 	max-width: 30em;
 	margin: inherit;
@@ -36,6 +36,11 @@
 	overflow: hidden;
 	padding: .5%;
 	width:100%;
+}
+.myform button:hover{
+	background-color: aqua;
+    font-weight: bold;
+	color: black;
 }
 
 .myform input, textarea, button, select, option{
