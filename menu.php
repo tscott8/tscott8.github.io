@@ -15,10 +15,10 @@ session_start();
 	</head>
 	<body class=\"center\">
 		<fieldset class=\"myform\" >
+		<legend>" . $user_type . " Menu</legend>
 		<form id=\"menu\" action=\"menu_handler.php\" method=\"post\">
 		<fieldset>
-			<legend>" . $user_type . " Menu</legend>
-			What would you like to do?
+			<legend>What would you like to do?</legend>
 			<ul>
 				<li><button type=\"submit\" id=\"search\" name=\"menu_select\" value=\"search\">Search For a Profile</button></li>
 				<li><button type=\"submit\" id=\"update\" name=\"menu_select\" value=\"update\">Update Profile</button></li>

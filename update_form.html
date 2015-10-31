@@ -1,10 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['logged_in'])){
-header("location: menu.php");
-}
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,83 +8,12 @@ header("location: menu.php");
 		<link rel="stylesheet" type="text/css" href="SuperRecruiter.css"/>
 		<title>New User Creation</title>
         <script type="text/javascript">
-            function checkForm()
-			{ 
-                if(document.getElementById("first_name").value == "")
-                {
-					document.getElementById("first_name_message").innerHTML = "Enter your First Name.";
-					document.getElementById("first_name").focus();
-					return false;
-                }
-                if(document.getElementById("last_name").value == "")
-                {
-					document.getElementById("last_name_message").innerHTML = "Enter your Last Name";
-					document.getElementById("last_name").focus();
-					return false;
-                }
-				if(document.getElementById("user_type").value == "")
-                {
-					document.getElementById("user_type_message").innerHTML = "Select a user type";
-					document.getElementById("user_type").focus();
-					return false;
-                }
-                if(document.getElementById("username").value == "")
-                {
-					document.getElementById("username_message").innerHTML = "Enter your Email";
-					document.getElementById("username").focus();
-					return false;
-                }
-                if(document.getElementById("password").value == "")
-                {
-					document.getElementById("password_message").innerHTML = "Enter a Password";
-					document.getElementById("password").focus();
-					return false;
-                }
-                if(checkPassMatch() == false)
-				{
-					document.getElementById("password_confirm").focus();
-					return false;
-                }
-            }
-            function checkPassMatch()
-			{
-				if(document.getElementById("password").value != document.getElementById("password_confirm").value)
-                {
-                	document.getElementById("match_message").innerHTML = "passwords do not match!";
-                    return false;
-                }
-                else
-                    return true;
-            }
-            function clear_message()
-			{           
-                document.getElementById("first_name_message").innerHTML = "";
-				document.getElementById("last_name_message").innerHTML = "";
-				document.getElementById("phone_message").innerHTML = "";
-				document.getElementById("email_message").innerHTML = "";
-				document.getElementById("password_message").innerHTML = "";
-				document.getElementById("match_message").innerHTML = "";
-            }
-			function check_user_type()
-			{
-				if(document.getElementById("user_type").value == "Student")
-				{
-					document.getElementById("major_selector").style.display = '';
-					document.getElementById("skills").style.display = '';
-			
-				}
-				else 
-				{
-					document.getElementById("major_selector").style.display = 'none';
-					document.getElementById("skills").style.display = 'none';
-				}
-			}
         </script>
     </head>
     <body class="center" onload="check_user_type()">
 		<fieldset class="myform">
-		<legend>Create your SuperRecruiter account</legend>
-        <form id="register" action="create_new_user.php" method="post" onsubmit="return checkForm()"> 
+		<legend>Update your SuperRecruiter account</legend>
+        <form id="update" action="update.php" method="post" onsubmit="return checkForm()"> 
             
 				<span style="color:red">*required</span>
             <ul>
