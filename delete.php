@@ -19,10 +19,10 @@ function connect_to_db()
 }
 function confirm_delete()
 {
-	$response = $_POST['q2'];
+	$response = $_POST["q2"];
 	if($response == "yes")
 		return true;
-	else
+	else if($response == "no")
 		return false;
 }
 function delete()
@@ -44,12 +44,14 @@ function delete()
 	   	die(); 
 	}
 	$db=null;
+	header("location: startup.html");
 }
 function main()
 {
 	if(confirm_delete() == true)
 		delete();
-	header("location: menu.php");
+	else
+		header("location: menu.php");
 
 }
 main();
