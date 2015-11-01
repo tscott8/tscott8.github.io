@@ -15,7 +15,7 @@ session_start();
 				document.getElementById("phone").value = "<?php echo $_SESSION['phone_update'];?>";
 				document.getElementById("user_type").value = "<?php echo $_SESSION['user_type_update'];?>";
 				document.getElementById("major").value = "<?php echo $_SESSION['major_update'];?>";
-				document.getElementById("skills").innerhtml = "<?php echo $_SESSION['skills_update'];?>";
+				document.getElementById("skills").value = "<?php echo $_SESSION['skills_update'];?>";
 				document.getElementById("username").value = "<?php echo $_SESSION['username_update'];?>";
 				document.getElementById("password").value = "<?php echo $_SESSION['password_update'];?>";
 				document.getElementById("password_confirm").value = "<?php echo $_SESSION['password_update'];?>";
