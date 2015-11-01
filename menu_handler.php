@@ -85,7 +85,7 @@ session_start();
 						<button type=\"submit\" name=\"q2\" value=\"yes\">Yes</button>
 					</li> 
 					<li>
-						<br><button type=\"submit\" name=\"q2\" value=\"no\">No</button>
+						<button type=\"submit\" name=\"q2\" value=\"no\">No</button>
 					</li>
 			</ul>
 		</fieldset>
