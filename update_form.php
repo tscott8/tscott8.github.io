@@ -20,6 +20,68 @@ session_start();
 				document.getElementById("password").value = "<?php echo $_SESSION['password_update'];?>";
 				document.getElementById("password_confirm").value = "<?php echo $_SESSION['password_update'];?>";
 			}
+			function checkForm()
+			{ 
+				var return_val = true;
+                if(document.getElementById("first_name").value == "")
+                {
+					document.getElementById("first_name_message").innerHTML = "Enter your First Name.";
+					return_val = false;
+                }
+				else
+					clear_message("first_name");
+                if(document.getElementById("last_name").value == "")
+                {
+					document.getElementById("last_name_message").innerHTML = "Enter your Last Name";
+					return_val = false;
+                }
+				else
+					clear_message("last_name");
+				if(document.getElementById("user_type").value == "- Select User Type -")
+                {
+					document.getElementById("user_type_message").innerHTML = "Select a user type";
+					return_val = false;
+                }
+				else
+					clear_message("user_type");
+                if(document.getElementById("username").value == "")
+                {
+					document.getElementById("username_message").innerHTML = "Enter your Email";
+					return_val = false;
+                }
+				else
+					clear_message("username");
+                if(document.getElementById("password").value == "")
+                {
+					document.getElementById("password_message").innerHTML = "Enter a Password";
+					return_val = false;
+                }
+				else
+					clear_message("password");
+                if(checkPassMatch() == false)
+				{
+					return_val = false;
+                }
+				else
+					clear_message("password_confirm");
+				
+				return return_val;
+            }
+            function checkPassMatch()
+			{
+				if(document.getElementById("password").value != document.getElementById("password_confirm").value)
+                {
+                	document.getElementById("password_confirm_message").innerHTML = "Passwords do not match!";
+                    return false;
+                }
+                else
+                    return true;
+            }
+            function clear_message(message_to_clear)
+			{           
+				var string = message_to_clear + "_message";
+                document.getElementById(string).innerHTML = "";
+            }
 			function check_user_type()
 			{
 				if(document.getElementById("user_type").value == "Student")
@@ -36,7 +98,7 @@ session_start();
 			}
         </script>
     </head>
-    <body class="center" onload="autofill()">
+    <body class="center" onload="autofill();check_user_type()">
 		<fieldset class="myform">
 		<legend>Update your SuperRecruiter account</legend>
         <form id="update" action="update.php" method="post" onsubmit="return checkForm()"> 
