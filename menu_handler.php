@@ -21,7 +21,7 @@ function search()
 {
 	echo "in search";
 	//need to display fancy options in the html
-	header("location: search.php");
+	header("location: search_form.php");
 
 }
 function update($db)
