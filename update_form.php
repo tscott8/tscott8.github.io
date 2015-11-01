@@ -135,7 +135,7 @@ session_start();
 				</li>
 				<li style="display:none" id="skills">Please list your skills:
 					<!--dynamic unfolding list would be nice-->
-					<br><textarea name="skills" rows="5" cols="30"></textarea><span class="asterisk">*</span>
+					<br><textarea name="skills" id="skills" rows="5" cols="30"></textarea><span class="asterisk">*</span>
 				</li>
 				<li>Email: <span style="color:green; text-transform:uppercase; font-size:75%;">(this will be your username)</span>
                     <br><input type="email" id="username" name="username" onchange="checkForm()" placeholder="Enter a valid Email"/><span class="asterisk">*</span>
