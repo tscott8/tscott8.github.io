@@ -1,5 +1,5 @@
 <?php
-session_start();\
+session_start();
 function connect_to_db()
 {
 	$conn="";
