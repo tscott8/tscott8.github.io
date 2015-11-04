@@ -9,15 +9,25 @@ session_start();
 	<script type="text/javascript">
 		function unhide_major()
 		{
-			document.getElementById("major_selector").style.display = '';				
+			if(document.getElementById("sort_major").checked == true)
+				document.getElementById("major_selector").style.display = '';
+			else
+				document.getElementById("major_selector").style.display = 'none';
 		}
 		function unhide_name()
 		{
-			document.getElementById("last_inputer").style.display = '';				
+			if(document.getElementById("sort_last_name").checked == true)
+				document.getElementById("last_inputer").style.display = '';	
+			else
+				document.getElementById("major_selector").style.display = 'none';
+
 		}
 		function unhide_type()
 		{
-			document.getElementById("type_selector").style.display = '';				
+			if(document.getElementById("sort_type").checked == true)
+				document.getElementById("type_selector").style.display = '';	
+			else
+				document.getElementById("type_selector").style.display = 'none';
 
 		}
 	</script>
@@ -30,7 +40,7 @@ session_start();
 			<fieldset>
 			<legend>Apply Filters to select candidates</legend>
 				<ul>
-					<li>Sort by Major<input type="checkbox" name="sort_major" value="sort_major" onchange="unhide_major()"></li>
+					<li>Sort by Major<input type="checkbox" id="sort_major" name="sort_major" value="sort_major" onchange="unhide_major()"></li>
 					<li style="display:none" id="major_selector">
 						<select id="major" name="major">
 							<option>- Select Major -</option>
@@ -42,9 +52,9 @@ session_start();
 							<option value="CIT">CIT</option>
 							<option value="Physics">Physics</option>
 						</select></li>
-					<li>Sort by Last Name<input type="checkbox" name="sort_last_name" value="sort_last_name" onchange="unhide_name()"></li>
+					<li>Sort by Last Name<input type="checkbox" id="sort_last_name" name="sort_last_name" value="sort_last_name" onchange="unhide_name()"></li>
 					<li style="display:none" id="last_inputer"><input type="text" name="last"></li>
-					<li>Sort by User Type<input type="checkbox" name="sort_type" value="sort_type" onchange="unhide_type()"></li>
+					<li>Sort by User Type<input type="checkbox" id="sort_type" name="sort_type" value="sort_type" onchange="unhide_type()"></li>
 					<li style="display:none" id="type_selector">
                     <select id="user_type" name="user_type" >
 						<option>- Select User Type -</option>
