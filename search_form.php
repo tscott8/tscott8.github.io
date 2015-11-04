@@ -6,6 +6,21 @@ session_start();
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="SuperRecruiter.css"/>
 	<title>SuperRecruiter Startup</title>
+	<script type="text/javascript">
+		function unhide_major()
+		{
+			document.getElementById("major_selector").style.display = '';				
+		}
+		function unhide_name()
+		{
+			document.getElementById("last_inputer").style.display = '';				
+		}
+		function unhide_type()
+		{
+			document.getElementById("type_selector").style.display = '';				
+
+		}
+	</script>
 </head>
 
     <body class="center">
@@ -31,7 +46,7 @@ session_start();
 					<li style="display:none" id="last_inputer"><input type="text" name="last"></li>
 					<li><button type="radio" name="sort_type" value="sort_type" onselect="unhide_type()">Sort by User Type</button></li>
 					<li style="display:none" id="type_selector">
-                    <br><select id="user_type" name="user_type" onchange="check_user_type(); checkForm()">
+                    <br><select id="user_type" name="user_type" >
 						<option>- Select User Type - </option>
 						<option value="Student">Student</option>
 						<option value="Recruiter">Recruiter</option>
