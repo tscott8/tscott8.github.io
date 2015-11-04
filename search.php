@@ -28,10 +28,10 @@ function search()
 	{	
 		$sql = "SELECT * FROM users WHERE (major = :major OR last_name = :name OR user_type = :user_type)";
 		$statement = $db->prepare($sql);
-		$statement->execute();
 		$statement->bindValue(':major',$major);
 		$statement->bindValue(':last_name',$last_name);
 		$statement->bindValue(':user_type',$user_type);
+		$statement->execute();
 		$read = $statement->fetch();
 		$statement->closeCursor();
 	}
