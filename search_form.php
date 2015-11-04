@@ -61,7 +61,7 @@ session_start();
 						<option value="Student">Student</option>
 						<option value="Recruiter">Recruiter</option>
 						</select></div></li>					
-					<li><button type="submit">Apply Filters</button></li>
+					<li><br><button type="submit">Apply Filters</button></li>
 				</ul>
 			</fieldset>
 			</form>
