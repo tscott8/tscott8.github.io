@@ -19,7 +19,7 @@ session_start();
 			if(document.getElementById("sort_last_name").checked == true)
 				document.getElementById("last_inputer").style.display = '';	
 			else
-				document.getElementById("major_selector").style.display = 'none';
+				document.getElementById("last_inputer").style.display = 'none';
 
 		}
 		function unhide_type()
