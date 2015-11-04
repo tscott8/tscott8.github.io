@@ -40,8 +40,8 @@ session_start();
 			<fieldset>
 			<legend>Apply Filters to select candidates</legend>
 				<ul>
-					<li>Sort by Major<input type="checkbox" id="sort_major" name="sort_major" value="sort_major" onchange="unhide_major()"></li>
-					<li style="display:none" id="major_selector">
+					<li>Sort by Major<input type="checkbox" id="sort_major" name="sort_major" value="sort_major" onchange="unhide_major()">
+					<div style="display:none" id="major_selector">
 						<select id="major" name="major">
 							<option>- Select Major -</option>
 							<option value="CS">Computer Science</option>
@@ -51,16 +51,16 @@ session_start();
 							<option value="CE">Civil Engineering</option>
 							<option value="CIT">CIT</option>
 							<option value="Physics">Physics</option>
-						</select></li>
-					<li>Sort by Last Name<input type="checkbox" id="sort_last_name" name="sort_last_name" value="sort_last_name" onchange="unhide_name()"></li>
-					<li style="display:none" id="last_inputer"><input type="text" name="last"></li>
-					<li>Sort by User Type<input type="checkbox" id="sort_type" name="sort_type" value="sort_type" onchange="unhide_type()"></li>
-					<li style="display:none" id="type_selector">
+						</select></div></li>
+					<li>Sort by Last Name<input type="checkbox" id="sort_last_name" name="sort_last_name" value="sort_last_name" onchange="unhide_name()">
+						<div style="display:none" id="last_inputer"><input type="text" name="last"></div></li>
+					<li>Sort by User Type<input type="checkbox" id="sort_type" name="sort_type" value="sort_type" onchange="unhide_type()">
+					<div style="display:none" id="type_selector">
                     <select id="user_type" name="user_type" >
 						<option>- Select User Type -</option>
 						<option value="Student">Student</option>
 						<option value="Recruiter">Recruiter</option>
-					</select></li>					
+						</select></div></li>					
 					<li><button type="submit">Apply Filters</button></li>
 				</ul>
 			</fieldset>
