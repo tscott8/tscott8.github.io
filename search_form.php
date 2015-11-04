@@ -52,9 +52,9 @@ session_start();
 							<option value="CIT">CIT</option>
 							<option value="Physics">Physics</option>
 						</select></div></li>
-					<li>Sort by Last Name<input type="checkbox" id="sort_last_name" name="sort_last_name" value="sort_last_name" onchange="unhide_name()">
+					<li><br>Sort by Last Name<input type="checkbox" id="sort_last_name" name="sort_last_name" value="sort_last_name" onchange="unhide_name()">
 						<div style="display:none" id="last_inputer"><input type="text" name="last"></div></li>
-					<li>Sort by User Type<input type="checkbox" id="sort_type" name="sort_type" value="sort_type" onchange="unhide_type()">
+					<li><br>Sort by User Type<input type="checkbox" id="sort_type" name="sort_type" value="sort_type" onchange="unhide_type()">
 					<div style="display:none" id="type_selector">
                     <select id="user_type" name="user_type" >
 						<option>- Select User Type -</option>
