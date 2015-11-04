@@ -33,7 +33,7 @@ session_start();
 	</script>
 </head>
 
-    <body class="center">
+    <body class="center" onload="unhide_major(); unhide_name(); unhide_type();">
 		<fieldset class="myform" >
 			<legend>Filter Search</legend>
 		<form id="startup" method="post" action="search.php">

@@ -26,7 +26,7 @@ function search()
 	$user_type = $_POST["user_type"]
 	try
 	{	
-		$sql = "SELECT * FROM users WHERE (major = :major OR last_name = :name OR user_type = :user_type)";
+		$sql = "SELECT * FROM users WHERE major LIKE :major OR last_name LIKE :name OR user_type LIKE :user_type";
 		$statement = $db->prepare($sql);
 		$statement->bindValue(':major',$major);
 		$statement->bindValue(':last_name',$last_name);
