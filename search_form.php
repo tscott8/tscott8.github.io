@@ -30,10 +30,10 @@ session_start();
 			<fieldset>
 			<legend>Apply Filters to select candidates</legend>
 				<ul>
-					<li><input type="checkbox" name="sort_major" value="sort_major" onselect="unhide_major()">Sort by Major</li>
+					<li><input type="checkbox" name="sort_major" value="sort_major" onchange="unhide_major()">Sort by Major</li>
 					<li style="display:none" id="major_selector">
 						<select id="major" name="major">
-							<option>- Select Major - </option>
+							<option>- Select Major -</option>
 							<option value="CS">Computer Science</option>
 							<option value="CompE">Computer Engineering</option>
 							<option value="EE">Electrical Engineering</option>
@@ -42,9 +42,9 @@ session_start();
 							<option value="CIT">CIT</option>
 							<option value="Physics">Physics</option>
 						</select></li>
-					<li><input type="radio" name="sort_last_name" value="sort_last_name" onselect="unhide_name()">Sort by Last Name</li>
+					<li><input type="checkbox" name="sort_last_name" value="sort_last_name" onchange="unhide_name()">Sort by Last Name</li>
 					<li style="display:none" id="last_inputer"><input type="text" name="last"></li>
-					<li><input type="radio" name="sort_type" value="sort_type" onselect="unhide_type()">Sort by User Type</li>
+					<li><input type="checkbox" name="sort_type" value="sort_type" onchange="unhide_type()">Sort by User Type</li>
 					<li style="display:none" id="type_selector">
                     <br><select id="user_type" name="user_type" >
 						<option>- Select User Type -</option>
