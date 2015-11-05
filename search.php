@@ -1,4 +1,4 @@
-<? php
+<?php
 session_start();
 function connect_to_db()
 {
@@ -22,11 +22,11 @@ function search()
 {
 	$db = connect_to_db();	
 	$major = $_POST["major"];
-	$name = $_POST["last"];
+	$last_name = $_POST["last_name"];
 	$user_type = $_POST["user_type"]
 	try
 	{	
-		$sql = "SELECT * FROM users WHERE major LIKE :major OR last_name LIKE :name OR user_type LIKE :user_type";
+		$sql = "SELECT * FROM users WHERE major = :major OR last_name = :last_name OR user_type = :user_type";
 		$statement = $db->prepare($sql);
 		$statement->bindValue(':major',$major);
 		$statement->bindValue(':last_name',$last_name);
@@ -40,7 +40,7 @@ function search()
 		echo 'Error!: ' . $ex->getMessage();
 	   	die(); 
 	}
-	echo "<head>
+	echo "<html><head>
 	<meta charset=\"UTF-8\">
 	<link rel=\"stylesheet\" type=\"text/css\" href=\"SuperRecruiter.css\"/>
 	<title>Browse</title>
