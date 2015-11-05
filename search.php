@@ -29,24 +29,16 @@ function search()
 		$sql = "SELECT * FROM users WHERE major = :major OR last_name = :last_name OR user_type = :user_type";
 		$statement = $db->prepare($sql);
 		$statement->bindValue(':major',$major);
-		$statement->bindValue(':last_name',$last_name);
+		$statement->bindValue(':last_name', $last_name);
 		$statement->bindValue(':user_type',$user_type);
 		$statement->execute();
-		$read = $statement->fetch();
-		$statement->closeCursor();
-	}
-	catch (PDOException $ex) 
-	{
-		echo 'Error!: ' . $ex->getMessage();
-	   	die(); 
-	}
 	echo "<html><head>
 	<meta charset=\"UTF-8\">
 	<link rel=\"stylesheet\" type=\"text/css\" href=\"SuperRecruiter.css\"/>
 	<title>Browse</title>
 	</head><body class=\"center\"><fieldset class=\"myform\"><legend>Database Entries</legend>
 	<table><tr><th>ID</th><th>First</th><th>Last</th><th>Type</th><th>Email</th><th>Phone</th><th>Major</th><th>Skills</th></tr>";
-	foreach ($db->query($sql) as $row)
+	while ($row = $statement->fetch())
 	{	
 		echo '<tr>';
 		echo '<td>' . $row['user_id']. '</td>';
@@ -61,6 +53,13 @@ function search()
 	}
 	echo "</table></fieldset></body></html>";
 	//displays searched people in the db
+	$statement->closeCursor();
+	}
+	catch (PDOException $ex) 
+	{
+		echo 'Error!: ' . $ex->getMessage();
+	   	die(); 
+	}
 	$db=null;
 }	
 function main()

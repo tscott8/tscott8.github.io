@@ -97,6 +97,7 @@ echo $deleter;
 }
 function browse($db)
 {
+	//CLEANUP
 	try
 	{	
 		$sql = "SELECT * FROM users";
