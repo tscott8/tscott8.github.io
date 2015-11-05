@@ -35,7 +35,7 @@ function search()
 		$user_type = "%";
 	try
 	{	
-		$sql = "SELECT * FROM 'users' WHERE 'major' LIKE ':major' AND 'last_name' LIKE ':last_name' AND 'user_type' LIKE ':user_type'";
+		$sql = "SELECT * FROM users WHERE major LIKE :major AND last_name LIKE :last_name AND user_type LIKE :user_type";
 		$statement = $db->prepare($sql);
 		$statement->bindValue(':major',$major);
 		$statement->bindValue(':last_name', $last_name);
