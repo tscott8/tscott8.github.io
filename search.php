@@ -23,7 +23,7 @@ function search()
 	$db = connect_to_db();	
 	$major = $_POST["major"];
 	$last_name = $_POST["last_name"];
-	$user_type = $_POST["user_type"]
+	$user_type = $_POST["user_type"];
 	try
 	{	
 		$sql = "SELECT * FROM users WHERE major = :major OR last_name = :last_name OR user_type = :user_type";
