@@ -21,21 +21,21 @@ function connect_to_db()
 function search() 
 {
 	$db = connect_to_db();	
-	if(isset($_POST["major"]))
+	if(isset($_POST["sort_major"]))
 		$major = $_POST["major"];
 	else
 		$major = "%";
-	if(isset($_POST["last_name"]))
+	if(isset($_POST["sort_last_name"]))
 		$last_name = $_POST["last_name"];
 	else
 		$last_name = "%";
-	if(isset($_POST["user_type"]))
+	if(isset($_POST["sort_user_type"]))
 		$user_type = $_POST["user_type"];
 	else
 		$user_type = "%";
 	try
 	{	
-		$sql = "SELECT * FROM users WHERE major LIKE :major AND last_name LIKE :last_name AND user_type LIKE :user_type";
+		$sql = "SELECT * FROM 'users' WHERE 'major' LIKE ':major' AND 'last_name' LIKE ':last_name' AND 'user_type' LIKE ':user_type'";
 		$statement = $db->prepare($sql);
 		$statement->bindValue(':major',$major);
 		$statement->bindValue(':last_name', $last_name);
