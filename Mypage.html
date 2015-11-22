@@ -1,48 +1,572 @@
+
 <!DOCTYPE html>
-
-<html xmlns = "http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="mypage.css"/>
-	<title>Tyler Scott</title>
+  <title>Tyler Scott's Homepage V2.0</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+	  text-shadow:3px 3px #000000;
+      line-height: 1.8;
+      color: white;
+	  background-image: url("background.jpg");
+	  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: white;
+      font-weight: 400;
+      margin-bottom: 15px;
+  }
+a:link {
+	color: gray;
+	background-color:transparent;
+	text-decoration:none;
+}
+a:visited {
+	color:gray;
+	background-color:transparent;
+	text-decoration:none;
+}
+a:hover {
+	color:darkslategray;
+	background-color:transparent;
+	text-decoration:underline;
+}
+a:active {
+	color:darkslategray;
+	background-color:transparent;
+	text-decoration:bold;
+}
+  .jumbotron {
+      background: -webkit-linear-gradient(transparent,black,black,transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent,black,black,transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent,black,black,transparent); /* For Firefox 3.6 to 15 */
+	  background: linear-gradient(transparent,black,black,transparent); /* Standard syntax (must be last) */
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background: -webkit-linear-gradient(transparent,black,black,transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent,black,black,transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent,black,black,transparent); /* For Firefox 3.6 to 15 */
+	  background: linear-gradient(transparent,black,black,transparent); /* Standard syntax (must be last) */
+
+  }
+  .logo-small {
+      color: darkslategray;
+      font-size: 50px;
+  }
+  .logo {
+      color: darkslategray;
+      font-size: 200px;
+  }
+  .icon a img{
+		  width:100px;
+	  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: darkslategray;
+  }
+  .carousel-indicators li {
+      border-color: darkslategray;
+  }
+  .carousel-indicators li.active {
+      background-color: darkslategray;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid black; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid black;
+      background-color: #fff !important;
+      color: black;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: black !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: darkslategray !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: black;
+      color: #fff;
+  }
+  .nav-tabs {
+      margin-bottom: 0;
+      background-color: black;
+      z-index: 9999;
+      font-size: 12px !important;
+	  text-shadow:none;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .nav-tabs li a {
+	  text-shadow:none;
+	   text-transform: uppercase;
+  }
+  .nav-tabs li a:hover, .nav-tabs li.active a {
+      color: white !important;
+      background-color: darkslategrey !important;
+  }
+
+  .navbar {
+      margin-bottom: 0;
+      background-color: black;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+	  text-shadow:none;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: white !important;
+      background-color: darkslategrey !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  .navbar-brand > img {
+      max-height: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: darkslategray;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      visibility: visible;			
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }	
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  </style>
 </head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
 
-<body class="center">
-	<div id="navbar">
-		<nav>
-			<ul>
-				<li><a href="Mypage.html">Home</a></li>
-				<li><a href="About.html">About Me</a></li>
-				<li><a href="Portfolio.html">Portfolio</a></li>
-				<li><a href="Resume.pdf">Resume</a></li>
-				<li><a href=""><!--Open an email link here a href="Contact.html"-->Contact</a></li>
-				<li><a href=""><!--DROP DOWN MENU HERE a href="LinkedPages.html"-->Links</a></li>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Tyler Scott</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#resume">RESUME</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+		<li><a href="#profiles">ONLINE PRESENCE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-			</ul>
-		</nav>
+<div class="jumbotron text-center">
+  <h1>Tyler Scott</h1>
+	<a href="https://www.linkedin.com/in/tylerscottcs">
+		<img src="https://graph.facebook.com/1375378340/picture?&height=1000&width=1000" class="img-responsive img-circle margin" style="display:inline" alt="Click here for my LinkedIn Profile" width="350" height="350"></a>
+  <h3>Developer. Adventurer. Leader.</h3>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+	 <h2 class="text-center">About Me</h2>
+	 <h4>Quick View</h4>
+               <ul>
+                  <li>Major: Computer Science</li>
+				   <li>Graduation: April 2017</li>
+				   <li>Status: Student + Freelance Programmer</li>
+				 	<li>Occupation: Assistant Systems Admin</li>
+                  <li>Location: Rexburg, ID <a href ="none.jpg"><span class="glyphicon glyphicon-map-marker"></span></a></li>
+               </ul>
+     <h4>Interests/Hobbies:</h4>
+               <ul>
+                  <li>Computers -  Software, Hardware, Operating Systems, etc...</li>
+                  <li>Technology - Electronics, gadgets, sound systems, other geeky stuff...</li>
+                  <li>Programming - Assembly, C/C++, C#, Java, HTML/CSS, PHP, JavaScript, Python...</li>
+                  <li>Snowboarding - My passion...(I could do it all day everyday...)</li>
+                  <li>Mountain Biking - Especially aggressive downhill</li>
+                  <li>Video Games</a></li>
+               </ul>        
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-user logo slideanim"></span>
+    </div>
 	</div>
+</div>
 
-	<div class="center" id="header">
-		<header>
-			<table>
-				<tr>
-					<td>
-						<a href="https://www.facebook.com/BigT.Scott">
-							<img src="https://graph.facebook.com/1375378340/picture?&height=1000&width=1000" style="border:2px solid black; border-radius: 50%;" width="50%">
-						</a>
-					</td>
-					<td id="impact">
-						<blockquote>
-							Tyler Scott<br><br> Developer. Adventurer.<br> Inspirer. Overcomer.<br><br>Doer.
-						</blockquote>
-					</td>
-				</tr>
-			</table>
-		</header>
-	</div>
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2 class="text-center">Vector</h2>
+      <h4><strong>GOAL:</strong> <br>My goal is to Graduate with BS in Computer Science and learn as much as i can about Programming</h4><br>
+		<p><strong>VISION:</strong> I grew up around technology my whole life, however it wasnt until my freshman year when i took my first programming class that i discovered i had <a href="https://www.youtube.com/watch?v=CmYDgncMhXw">"the knack"</a>. I am a tinkerer and love solving complex problems both physical and theoretical. I have a strong attention to detail and can laser focus in on a project until completion which gives me a great advantage over my peers. I know various programming languages and have experience in software development in many forms. </p>
+	  </div>
+  </div>
+</div>
 
-	<div id="footer">
-		<footer>Tyler Scott - Computer Science Student - BYUI - Contact Email:<a href="mailto:tybugman@hotmail.com"> tybugman@hotmail.com</a></footer>
-	</div>
+<!-- Container (Services Section) -->
+<div id="skills" class="container-fluid text-center">
+  <h2>Top Skills</h2>
+  <h4>What i can do</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-home logo-small"></span>
+      <h4>C++/C#</h4>
+      <p>My strongest and most comfortable</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-heart-empty logo-small"></span>
+      <h4>Java</h4>
+      <p>My go to for large applications</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-tag logo-small"></span>
+      <h4>HTML/CSS</h4>
+      <p>Your lookin at it</p>
+    </div>
+	  <div class="col-sm-3">
+      <span class="glyphicon glyphicon-flash logo-small"></span>
+      <h4>JavaScript</h4>
+      <p>For makin cool stuff</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+	 <div class="col-sm-3">
+      <span class="glyphicon glyphicon-usd logo-small"></span>
+      <h4>PHP/MySQL</h4>
+      <p>For databases and server stuff</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-console logo-small"></span>
+      <h4>Assembly</h4>
+      <p>When i really need to get down to the nitty gritty</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-fire logo-small"></span>
+      <h4>Python</h4>
+      <p>For quick fixes and easy implementation</p>
+    </div>
+    <div class="col-sm-3">
+      <span class="glyphicon glyphicon-phone logo-small"></span>
+      <h4>Android</h4>
+      <p>To play with</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Portfolio</h2><br>
+	<div class="row text-center slideanim">
+<h4 class="text-left">My Projects</h4>  
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">All Code</a></li>
+	  <!--Show github repository here-->
+    <li><a data-toggle="tab" href="#menu1">Tableiness</a></li>
+    <li><a data-toggle="tab" href="#menu2">SuperRecruiter</a></li>
+	<li><a data-toggle="tab" href="#menu3">Walle+Eva</a></li>
+	<li><a data-toggle="tab" href="#menu4">TripCast</a></li>
+  </ul>
+
+  <div class="tab-content text-left">
+    <div id="home" class="tab-pane fade in active">
+      <h4>Git Repository</h4>
+      <p>Here lies all my source code i am willing to publish, use at your own risk...</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h4>Tableiness</h4>
+      <p>A Java Program built to generate truth tables to assist Discrete Math students.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h4>SuperRecruiter</h4>
+      <p>A mini Linked-In like App, still has a lot of room to grow</p>
+    </div>
+	<div id="menu3" class="tab-pane fade">
+      <h4>Walle+Eva</h4>
+      <p>Raspberry Pi based laser tag robot tanks</p>
+    </div>
+	<div id="menu4" class="tab-pane fade">
+      <h4>TripCast</h4>
+      <p>Under Construction...</p>
+    </div>
+  </div>
+</div><br><br><br><br><hr>
+  
+  <h2>What others have said about me</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- Container (Resume Section) -->
+<div id="resume" class="container-fluid">
+  <div class="text-center">
+    <h2>Resume</h2>
+    <h4>Check it out.</h4>
+  </div>
+  <div class="row text-center slideanim">
+	   <div class="col-sm-12">
+	  <embed width="600" height="820" src="Resume.pdf" type="application/pdf"></embed>
+      </div>      
+    </div>    
+  </div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact me and I'll get back to you ASAP.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Rexburg, ID</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +1234567890</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> tyler.scott.cs@gmail.com</p>	   
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>	
+    </div>
+  </div>
+</div>
+
+<!-- Container (Online Presence) -->
+<div id="profiles" class="container-fluid text-center bg-grey">
+  
+
+	<h2>Online Presence</h2><br>
+  <h4>Some more Profiles</h4>
+  <div class="row text-center slideanim">
+    <div class="col-sm-2">
+      <div class="icon">
+		  <a href="http://steamcommunity.com/id/BigTScott">
+			  <img src="steam icon.png" alt="Steam"></a>
+        <p><strong>Steam</strong></p>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="icon">
+		  <a href="https://www.facebook.com/BigT.Scott">
+			  <img src="fb icon.png" alt="Facebook"></a>
+        <p><strong>Facebook</strong></p>
+      </div>
+    </div>
+      <div class="col-sm-2">
+      <div class="icon">
+		  <a href="https://www.linkedin.com/in/tylerscottcs">
+			  <img src="linkedin icon.png" alt="LinkedIn"></a>
+        <p><strong>LinkedIn</strong></p>
+      </div>
+    </div>
+	<div class="col-sm-2">
+      <div class="icon">
+		  <a href="https://github.com/tscott8">
+			  <img src="github icon.png" alt="GitHub"></a>
+        <p><strong>GitHub</strong></p>
+      </div>
+    </div>
+	<div class="col-sm-2">
+      <div class="icon">
+		  <a href="http://us.battle.net/d3/en/profile/BigTScott-1628/hero/53566837">
+			  <img src="d3 icon.png" alt="D3"></a>
+        <p><strong>Diablo III</strong></p>
+      </div>
+    </div>
+  </div><br>
+</div>
+
+<!--Footer-->
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Return to top of page</p>		
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Prevent default anchor click behavior
+    event.preventDefault();
+
+    // Store hash
+    var hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 900, function(){
+   
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  });
+  
+  // Slide in elements on scroll
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
 </body>
 </html>
