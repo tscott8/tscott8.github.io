@@ -17,6 +17,7 @@
       line-height: 1.8;
       color: white;
 	  background-image: url("background.jpg");
+	  background-size: auto;
 	  }
   h2 {
       font-size: 24px;
@@ -81,6 +82,10 @@ a:active {
   }
   .icon a img{
 		  width:100px;
+	  }
+  .rez{
+	  	width: 600px;
+	  	height: 820px;
 	  }
   .carousel-control.right, .carousel-control.left {
       background-image: none;
@@ -227,6 +232,10 @@ a:active {
     }
   }
   @media screen and (max-width: 480px) {
+   .rez{
+   	width: 300px;
+   	height: 500px;
+   }
     .logo {
         font-size: 150px;
     }
@@ -439,7 +448,7 @@ a:active {
   </div>
   <div class="row text-center slideanim">
 	   <div class="col-sm-12">
-	  <embed width="600" height="820" src="Resume.pdf" type="application/pdf"></embed>
+	  <embed class="rez" src="Resume.pdf" type="application/pdf"></embed>
       </div>      
     </div>    
   </div>
