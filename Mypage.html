@@ -9,6 +9,7 @@
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="RepoJS/repo.js"></script>
   <style>
   body {
       font: 400 15px Lato, sans-serif;
@@ -386,7 +387,6 @@
 <h4 class="text-left">My Projects</h4>  
   <ul class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">All Code</a></li>
-	  <!--Show github repository here-->
     <li><a data-toggle="tab" href="#menu1">Tableiness</a></li>
     <li><a data-toggle="tab" href="#menu2">SuperRecruiter</a></li>
 	<li><a data-toggle="tab" href="#menu3">Walle+Eva</a></li>
@@ -396,15 +396,18 @@
   <div class="tab-content text-left">
     <div id="home" class="tab-pane fade in active">
       <h4>Git Repository</h4>
-      <p>Here lies all my source code i am willing to publish, use at your own risk...</p>
+      <p>Here lies all my source code i am willing to publish, use at your own risk...<br>
+		<div id="repo1" style="text-shadow:none"></div></p>
     </div>
     <div id="menu1" class="tab-pane fade">
       <h4>Tableiness</h4>
-      <p>A Java Program built to generate truth tables to assist Discrete Math students.</p>
+      <p>A Java Program built to generate truth tables to assist Discrete Math students.<br>
+		<div id="repo2" style="text-shadow:none"></div></p>
     </div>
     <div id="menu2" class="tab-pane fade">
       <h4>SuperRecruiter</h4>
-      <p>A mini Linked-In like App, still has a lot of room to grow</p>
+      <p>A mini Linked-In like App, still has a lot of room to grow<br>
+		<div id="repo3" style="text-shadow:none"></div></p>
     </div>
 	<div id="menu3" class="tab-pane fade">
       <h4>Walle+Eva</h4>
@@ -535,6 +538,9 @@
 </footer>
 
 <script>
+	$('#repo1').repo({ user: 'tscott8', name: 'tscott8.github.io' });
+	$('#repo2').repo({ user: 'BryceLawrence', name: 'Tableiness' });
+	$('#repo3').repo({ user: 'tscott8', name: 'cs313' });
 $(document).ready(function(){
 	
 	$(document).on('click','.navbar-collapse.in',function(e) {
@@ -574,6 +580,8 @@ $(document).ready(function(){
     });
   });
 })
+
+
 </script>
 
 </body>
