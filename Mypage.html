@@ -391,6 +391,7 @@
     <li><a data-toggle="tab" href="#menu2">SuperRecruiter</a></li>
 	<li><a data-toggle="tab" href="#menu3">Walle+Eva</a></li>
 	<li><a data-toggle="tab" href="#menu4">TripCast</a></li>
+	<li><a data-toggle="tab" href="#menu5">VNA 3D Demo</a></li>
   </ul>
 
   <div class="tab-content text-left">
@@ -415,7 +416,13 @@
     </div>
 	<div id="menu4" class="tab-pane fade">
       <h4>TripCast</h4>
-      <p>Under Construction...</p>
+      <p>iframe container<br>
+		<div id="repo4" style="text-shadow:none"></div></p>
+    </div>
+	<div id="menu5" class="tab-pane fade">
+      <h4>Von Neumann Architecture 3D Demo</h4>
+      <p>iframe container<br>
+		<div id="repo5" style="text-shadow:none"></div></p>
     </div>
   </div>
 </div><br><br><br><br><hr>
@@ -541,6 +548,8 @@
 	$('#repo1').repo({ user: 'tscott8', name: 'tscott8.github.io' });
 	$('#repo2').repo({ user: 'BryceLawrence', name: 'Tableiness' });
 	$('#repo3').repo({ user: 'tscott8', name: 'cs313' });
+	$('#repo4').repo({ user: 'tscott8', name: 'TripCast' });
+	$('#repo5').repo({ user: 'tscott8', name: 'VNAness' });	
 $(document).ready(function(){
 	
 	$(document).on('click','.navbar-collapse.in',function(e) {
