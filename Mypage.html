@@ -20,22 +20,6 @@
             background-image: url("background.jpg");
             background-size: auto;
         }
-        h2 {
-            font-size: 24px;
-            text-transform: uppercase;
-            color: white;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        h4 {
-            font-size: 19px;
-            line-height: 1.375em;
-            color: white;
-            font-weight: 400;
-            margin-bottom: 15px;
-        }
-
         a:link {
             color: gray;
             background-color: transparent;
@@ -60,6 +44,32 @@
             text-decoration: bold;
         }
 
+        h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: white;
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        iframe {
+            width: 100%;
+            height: 50em;
+        }
+
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: darkslategray;
+        }
+
         .jumbotron {
             background: -webkit-linear-gradient(transparent, black, black, black, transparent);
             /* For Safari 5.1 to 6.0 */
@@ -71,6 +81,7 @@
             /* Standard syntax (must be last) */
             color: #fff;
             padding: 100px 25px;
+            padding-bottom: 0;
             font-family: Montserrat, sans-serif;
         }
 
@@ -243,10 +254,7 @@
             background-color: white;
         }
 
-        footer .glyphicon {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: darkslategray;
+        .repo{
         }
 
         .slideanim {
@@ -303,10 +311,12 @@
                 font-size: 150px;
             }
         }
-        iframe {
-            width: 100%;
-            height: 50em;
+        .repo {
+            border: none;
+            padding: none;
+            text-shadow: none;
         }
+
     </style>
 </head>
 
@@ -343,10 +353,12 @@
     </div>
 
     <!-- Container (About Section) -->
-    <div id="about" class="container" style="padding-top:40px">
-        <div class="row">
+    <div id="about" class="container" style="padding-top:60px">
+        <div class="row container">
+            <h2 class="col-lg-12 text-center">About Me</h2>
+        </div>
+        <div class="row container">
             <div class="col-sm-8">
-                <h2 class="text-center">About Me</h2>
                 <h4>Quick View</h4>
                 <ul>
                     <li>Major: Computer Science</li>
@@ -366,19 +378,22 @@
                 </ul>
             </div>
             <div class="col-sm-4">
+                <br />
                 <span class="glyphicon glyphicon-user logo slideanim"></span>
             </div>
         </div>
     </div>
 
-
-    <div class="container bg-grey" style="padding-top:40px">
-        <div class="row">
+    <div class="container bg-grey" style="padding-top:60px">
+        <div class="row container">
+            <h2 class="col-lg-12 text-center">Vector</h2>
+        </div>
+        <div class="row container">
             <div class="col-sm-4">
                 <span class="glyphicon glyphicon-globe logo slideanim"></span>
             </div>
             <div class="col-sm-8">
-                <h2 class="text-center">Vector</h2>
+
                 <h4><strong>GOAL:</strong> <br>My goal is to Graduate with BS in Computer Science and learn as much as i can about Programming</h4>
                 <br>
                 <p><strong>VISION:</strong> I grew up around technology my whole life, however it wasnt until my freshman year when i took my first programming class that i discovered i had <a href="https://www.youtube.com/watch?v=CmYDgncMhXw">"the knack"</a>.
@@ -389,7 +404,7 @@
     </div>
 
     <!-- Container (Services Section) -->
-    <div id="skills" class="container text-center" style="padding-top:40px">
+    <div id="skills" class="container text-center" style="padding-top:60px">
         <h2>Top Skills</h2>
         <h4>What i can do</h4>
         <br>
@@ -443,10 +458,11 @@
 
 
     <!-- Container (Portfolio Section) -->
-    <div id="portfolio" class="container text-center bg-grey" style="padding-top:40px">
-        <h2>Portfolio</h2>
-        <br>
-        <div class="container row text-center slideanim">
+    <div id="portfolio" class="container text-center bg-grey" style="padding-top:60px">
+        <div class="row container">
+            <h2 class="col-lg-12 text-center">Portfolio</h2>
+        </div>
+        <div class="row container text-center slideanim">
             <h4 class="text-left">My Projects</h4>
             <ul class="nav nav-tabs">
                 <li class="active"><a data-toggle="tab" href="#home">All Code</a></li>
@@ -462,14 +478,14 @@
                     <h4>Git Repository</h4>
                     <p>Here lies all my source code i am willing to publish, use at your own risk...
                         <br>
-                        <div id="repo1" style="text-shadow:none"></div>
+                        <div id="repo1" class="repo"></div>
                     </p>
                 </div>
                 <div id="menu1" class="tab-pane fade">
                     <h4>Tableiness</h4>
                     <p>A Java Program built to generate truth tables to assist Discrete Math students.
                         <br>
-                        <div id="repo2" style="text-shadow:none"></div>
+                        <div id="repo2" class="repo"></div>
                     </p>
                 </div>
                 <div id="menu2" class="tab-pane fade">
@@ -477,9 +493,8 @@
                     <p>A mini Linked-In like App, still has a lot of room to grow</p>
                     <iframe src="http://tscott8.github.io/cs313/Startup.html"></iframe>
                     <p>for full demo click <a href ="http://tscott8.github.io/cs313/Startup.html">here</a>
-
                         <br>
-                        <div id="repo3" style="text-shadow:none"></div>
+                        <div id="repo3" class="repo"></div>
                     </p>
                 </div>
                 <div id="menu3" class="tab-pane fade">
@@ -492,7 +507,7 @@
                     <iframe src="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html"></iframe>
                     <p>for full demo click <a href ="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html">here</a>
                         <br>
-                        <div id="repo4" style="text-shadow:none"></div>
+                        <div id="repo4" class="repo"></div>
                     </p>
                 </div>
                 <div id="menu5" class="tab-pane fade">
@@ -500,7 +515,7 @@
                     <iframe src="http://tscott8.github.io/VNAness/VNADemo.html"></iframe>
                     <p>for full demo click <a href ="http://tscott8.github.io/VNAness/VNADemo.html">here</a>
                         <br>
-                        <div id="repo5" style="text-shadow:none"></div>
+                        <div id="repo5" class="repo"></div>
                     </p>
                 </div>
             </div>
@@ -509,7 +524,7 @@
     </div>
 
         <!-- Container (Resume Section) -->
-        <div id="resume" class="container" style="padding-top:40px">
+        <div id="resume" class="container" style="padding-top:60px">
             <div class="text-center">
                 <h2>Resume</h2>
                 <h4>Check it out.</h4>
@@ -522,7 +537,7 @@
         </div>
 
         <!-- Container (Contact Section) -->
-        <div id="contact" class="container bg-grey" style="padding-top:40px">
+        <div id="contact" class="container bg-grey" style="padding-top:60px">
             <h2 class="text-center">CONTACT</h2>
             <div class="row">
                 <div class="col-sm-5">
@@ -552,7 +567,7 @@
         </div>
 
         <!-- Container (Online Presence) -->
-        <div id="profiles" class="container text-center">
+        <div id="profiles" class="container text-center" style="padding-top:60px">
 
             <h2>Online Presence</h2>
             <h4>Some more Profiles</h4>
@@ -619,12 +634,15 @@
             </div>
         </div>
         <!--Footer-->
-        <footer class="container text-center">
+        <footer class="container text-center" style="padding-top:60px">
             <a href="#myPage" title="To Top">
                 <span class="glyphicon glyphicon-chevron-up"></span>
             </a>
             <p>Return to top of page</p>
         </footer>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
         <script>
             $('#repo1').repo({
