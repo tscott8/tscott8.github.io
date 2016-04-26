@@ -20,6 +20,7 @@
             background-image: url("background.jpg");
             background-size: auto;
         }
+
         a:link {
             color: gray;
             background-color: transparent;
@@ -59,6 +60,7 @@
             font-weight: 400;
             margin-bottom: 15px;
         }
+
         iframe {
             width: 100%;
             height: 50em;
@@ -69,9 +71,11 @@
             margin-bottom: 20px;
             color: darkslategray;
         }
+
         pre {
             background-color: transparent;
         }
+
         .jumbotron {
             background: -webkit-linear-gradient(transparent, black, black, black, transparent);
             /* For Safari 5.1 to 6.0 */
@@ -310,8 +314,6 @@
                 font-size: 150px;
             }
         }
-
-
     </style>
 </head>
 
@@ -485,7 +487,7 @@
                     <h4>SuperRecruiter</h4>
                     <p>A mini Linked-In like App, still has a lot of room to grow</p>
                     <iframe src="http://tscott8.github.io/cs313/Startup.html"></iframe>
-                    <p>for full demo click <a href ="http://tscott8.github.io/cs313/Startup.html">here</a>
+                    <p>for full demo click <a href="http://tscott8.github.io/cs313/Startup.html">here</a>
                         <br>
                         <div id="repo3" style="text-shadow:none"></div>
                     </p>
@@ -498,7 +500,7 @@
                     <h4>TripCast</h4>
                     <p>An app to help you map the weather before a trip</p>
                     <iframe src="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html"></iframe>
-                    <p>for full demo click <a href ="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html">here</a>
+                    <p>for full demo click <a href="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html">here</a>
                         <br>
                         <div id="repo4" style="text-shadow:none"></div>
                     </p>
@@ -506,198 +508,229 @@
                 <div id="menu5" class="tab-pane fade">
                     <h4>Von Neumann Architecture 3D Demo</h4>
                     <iframe src="http://tscott8.github.io/VNAness/VNADemo.html"></iframe>
-                    <p>for full demo click <a href ="http://tscott8.github.io/VNAness/VNADemo.html">here</a>
+                    <p>for full demo click <a href="http://tscott8.github.io/VNAness/VNADemo.html">here</a>
                         <br>
                         <div id="repo5" style="text-shadow:none"></div>
                     </p>
                 </div>
             </div>
         </div>
-        <hr style="width:100%"/>
+        <hr style="width:100%" />
     </div>
 
-        <!-- Container (Resume Section) -->
-        <div id="resume" class="container" style="padding-top:60px">
-            <div class="text-center">
-                <h2>Resume</h2>
-                <h4>Check it out.</h4>
+    <!-- Container (Resume Section) -->
+    <div id="resume" class="container" style="padding-top:60px">
+        <div class="text-center">
+            <h2>Resume</h2>
+            <h4>Check it out.</h4>
+        </div>
+        <div class="row text-center slideanim">
+            <div class="col-sm-12">
+                <embed class="rez" src="Resume.pdf" type="application/pdf" />
+                <!--/embed-->
             </div>
-            <div class="row text-center slideanim">
-                <div class="col-sm-12">
-                    <embed class="rez" src="Resume.pdf" type="application/pdf"/><!--/embed-->
+        </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container bg-grey" style="padding-top:60px">
+        <h2 class="text-center">CONTACT</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Contact me and I'll get back to you ASAP.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Murray, UT</p>
+                <!--p><span class="glyphicon glyphicon-phone"></span> +1234567890</p-->
+                <p><a href="mailto:tyler.scott.cs@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a> tyler.scott.cs@gmail.com</p>
+            </div>
+            <div class="col-sm-7 slideanim">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-default pull-right" type="submit" id="form-submit">Send</button>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Container (Contact Section) -->
-        <div id="contact" class="container bg-grey" style="padding-top:60px">
-            <h2 class="text-center">CONTACT</h2>
-            <div class="row">
-                <div class="col-sm-5">
-                    <p>Contact me and I'll get back to you ASAP.</p>
-                    <p><span class="glyphicon glyphicon-map-marker"></span> Murray, UT</p>
-                    <!--p><span class="glyphicon glyphicon-phone"></span> +1234567890</p-->
-                    <p><a href = "mailto:tyler.scott.cs@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a> tyler.scott.cs@gmail.com</p>
-                </div>
-                <div class="col-sm-7 slideanim">
-                    <div class="row">
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-                        </div>
-                        <div class="col-sm-6 form-group">
-                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-                        </div>
-                    </div>
-                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-                    <br>
-                    <div class="row">
-                        <div class="col-sm-12 form-group">
-                            <button class="btn btn-default pull-right" type="submit" id="form-submit">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Container (Online Presence) -->
+    <div id="profiles" class="container text-center" style="padding-top:60px">
 
-        <!-- Container (Online Presence) -->
-        <div id="profiles" class="container text-center" style="padding-top:60px">
+        <h2>Online Presence</h2>
+        <h4>Some more Profiles</h4>
+        <div class="row slideanim">
+            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
 
-            <h2>Online Presence</h2>
-            <h4>Some more Profiles</h4>
-            <div class="row slideanim">
-                <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
-                        <li data-target="#myCarousel" data-slide-to="3"></li>
-                        <li data-target="#myCarousel" data-slide-to="4"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
-                        <div class="item active">
-                            <h4><div class="icon">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <h4><div class="icon">
                             <a href="http://steamcommunity.com/id/BigTScott">
                               <img src="steam icon.png" alt="Steam"></a>
                               <p><strong>Steam</strong></p>
                             </div></h4>
-                        </div>
-                        <div class="item">
-                            <h4><div class="icon">
+                    </div>
+                    <div class="item">
+                        <h4><div class="icon">
                               <a href="https://www.facebook.com/BigT.Scott">
                                 <img src="fb icon.png" alt="Facebook"></a>
                                 <p><strong>Facebook</strong></p>
                               </div></h4>
-                        </div>
-                        <div class="item">
-                            <h4><div class="icon">
+                    </div>
+                    <div class="item">
+                        <h4><div class="icon">
                                 <a href="https://www.linkedin.com/in/tylerscottcs">
                                   <img src="linkedin icon.png" alt="LinkedIn"></a>
                                   <p><strong>LinkedIn</strong></p>
                                 </div></h4>
-                        </div>
-                        <div class="item">
-                            <h4><div class="icon">
+                    </div>
+                    <div class="item">
+                        <h4><div class="icon">
                                   <a href="https://github.com/tscott8">
                                     <img src="github icon.png" alt="GitHub"></a>
                                     <p><strong>GitHub</strong></p>
                                   </div></h4>
-                        </div>
-                        <div class="item">
-                            <h4><div class="icon">
+                    </div>
+                    <div class="item">
+                        <h4><div class="icon">
                                     <a href="http://us.battle.net/d3/en/profile/BigTScott-1628/hero/53566837">
                                       <img src="d3 icon.png" alt="D3"></a>
                                       <p><strong>Diablo III</strong></p>
                                     </div></h4>
-                        </div>
                     </div>
-
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
-        <!--Footer-->
-        <footer class="container text-center" style="padding-top:60px">
-            <a href="#myPage" title="To Top">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a>
-            <p>Return to top of page</p>
-        </footer>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </div>
+    <!--Footer-->
+    <footer class="container text-center" style="padding-top:60px">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>Return to top of page</p>
+    </footer>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-        <script>
-            $('#repo1').repo({
-                user: 'tscott8',
-                name: 'tscott8.github.io'
-            });
-            $('#repo2').repo({
-                user: 'BryceLawrence',
-                name: 'Tableiness'
-            });
-            $('#repo3').repo({
-                user: 'tscott8',
-                name: 'cs313'
-            });
-            $('#repo4').repo({
-                user: 'tscott8',
-                name: 'TripCast'
-            });
-            $('#repo5').repo({
-                user: 'tscott8',
-                name: 'VNAness'
-            });
-            $(document).ready(function() {
+    <script>
+        $('#repo1').repo({
+            user: 'tscott8',
+            name: 'tscott8.github.io'
+        });
+        $('#repo2').repo({
+            user: 'BryceLawrence',
+            name: 'Tableiness'
+        });
+        $('#repo3').repo({
+            user: 'tscott8',
+            name: 'cs313'
+        });
+        $('#repo4').repo({
+            user: 'tscott8',
+            name: 'TripCast'
+        });
+        $('#repo5').repo({
+            user: 'tscott8',
+            name: 'VNAness'
+        });
+        $(document).ready(function() {
 
-                $(document).on('click', '.navbar-collapse.in', function(e) {
-                    if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
-                        $(this).collapse('hide');
+            $(document).on('click', '.navbar-collapse.in', function(e) {
+                if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
+                    $(this).collapse('hide');
+                }
+            });
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function() {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            });
+
+            // Slide in elements on scroll
+            $(window).scroll(function() {
+                $(".slideanim").each(function() {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
                     }
                 });
-                // Add smooth scrolling to all links in navbar + footer link
-                $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-                    // Prevent default anchor click behavior
-                    event.preventDefault();
-
-                    // Store hash
-                    var hash = this.hash;
-
-                    // Using jQuery's animate() method to add smooth page scroll
-                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 900, function() {
-
-                        // Add hash (#) to URL when done scrolling (default click behavior)
-                        window.location.hash = hash;
-                    });
-                });
-
-                // Slide in elements on scroll
-                $(window).scroll(function() {
-                    $(".slideanim").each(function() {
-                        var pos = $(this).offset().top;
-
-                        var winTop = $(window).scrollTop();
-                        if (pos < winTop + 600) {
-                            $(this).addClass("slide");
-                        }
-                    });
-                });
-            })
-        </script>
+            });
+        })
+    </script>
 
 </body>
 
