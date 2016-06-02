@@ -51,7 +51,7 @@
       text-transform: uppercase;
       color: white;
       font-weight: 600;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
 
     h4 {
@@ -81,27 +81,25 @@
 
     .jumbotron {
       background: -webkit-linear-gradient(transparent, black, black, black, transparent);
-      /* For Safari 5.1 to 6.0 */
       background: -o-linear-gradient(transparent, black, black, black, transparent);
-      /* For Opera 11.1 to 12.0 */
       background: -moz-linear-gradient(transparent, black, black, black, transparent);
-      /* For Firefox 3.6 to 15 */
       background: linear-gradient(transparent, black, black, black, transparent);
-      /* Standard syntax (must be last) */
+      /*background-image: url("images/backgroud.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;*/
+      padding-top: 10%;
       color: #fff;
-      padding: 100px 25px;
+      /*padding: 100px 25px;*/
       padding-bottom: 0;
       font-family: Montserrat, sans-serif;
+      /*padding-bottom: 100px;*/
     }
     .bg-grey {
       background: -webkit-linear-gradient(transparent, black, black, black, transparent);
-      /* For Safari 5.1 to 6.0 */
       background: -o-linear-gradient(transparent, black, black, black, transparent);
-      /* For Opera 11.1 to 12.0 */
       background: -moz-linear-gradient(transparent, black, black, black, transparent);
-      /* For Firefox 3.6 to 15 */
       background: linear-gradient(transparent, black, black, black, transparent);
-      /* Standard syntax (must be last) */
     }
 
     .logo-small {
@@ -349,21 +347,22 @@
 
   <!-- Container (About Section) -->
   <div id="about" class="container" style="padding-top:60px">
-    <div class="row container">
+    <div class="row">
       <h2 class="col-lg-12 text-center">About Me</h2>
     </div>
-    <div class="row container">
+    <div class="row">
       <div class="col-sm-8">
         <h4>Quick View</h4>
         <ul>
           <li>Major: Computer Science</li>
+          <li>University: BYU-Idaho
           <li>Graduation: April 2017</li>
           <li>Status: Student + Freelance Programmer</li>
           <li>Occupation: Software Engineering Intern @
             <a href="https://www.instructure.com/" class="inflate">INSTRUCTURE</a>
           </li>
           <li>Location: Murray, UT
-            <a href="none.jpg" class="inflate">
+            <a href="https://www.google.com/maps/place/Murray,+UT/@40.6552133,-111.9524075,12z/data=!3m1!4b1!4m5!3m4!1s0x875263fadae0b523:0x69b0984d520dc4b0!8m2!3d40.6668916!4d-111.8879909" class="inflate">
               <span class="glyphicon glyphicon-map-marker"></span>
             </a>
           </li>
@@ -372,41 +371,38 @@
         <ul>
           <li>Computers - Software, Hardware, Operating Systems, etc...</li>
           <li>Technology - Electronics, gadgets, sound systems, other geeky stuff...</li>
-          <li>Programming - Assembly, C/C++, C#, Java, HTML/CSS, PHP, JavaScript, Python...</li>
+          <li>Programming - C++, C#, Java, HTML/CSS, PHP, JavaScript, ThreeJS, React, Ruby, Python...</li>
           <li>Snowboarding - My passion...(I could do it all day everyday...)</li>
           <li>Mountain Biking - Especially aggressive downhill</li>
           <li>Video Games</li>
         </ul>
       </div>
       <div class="col-sm-4">
-        <br />
-        <span class="glyphicon glyphicon-user logo slideanim"></span>
+        <span class="glyphicon glyphicon-user logo slideanim" style=""></span>
       </div>
     </div>
   </div>
-
+  <!-- Container (About Section 2) -->
   <div class="container bg-grey" style="padding-top:60px">
-    <div class="row container">
+    <div class="row">
       <h2 class="col-lg-12 text-center">Vector</h2>
     </div>
-    <div class="row container">
+    <div class="row">
       <div class="col-sm-4">
         <span class="glyphicon glyphicon-globe logo slideanim"></span>
       </div>
       <div class="col-sm-8">
-        <h4><strong>GOAL:</strong> To Graduate with BS in Computer Science
-          and learn as much as i can about Programming</h4>
-        <br>
-        <p><strong>VISION:</strong> I grew up around technology my whole life,
-          however it wasnt until my freshman year when i took my first programming
-          class that i discovered i had
-          <a href="https://www.youtube.com/watch?v=CmYDgncMhXw" class="inflate">
-            "the knack"</a>.
-          I am a tinkerer and love solving complex problems both physical and
-          theoretical. I have a strong attention to detail and can laser focus
-          in on a project until completion which gives me a great advantage over
-           my peers. I know various programming languages and have experience in
-            software development in many forms. </p>
+          <h4><strong>GOAL:</strong> Graduate with BS in Computer Science</h4>
+          <p><strong>VISION:</strong> I grew up around technology my whole life,
+            however it wasnt until my freshman year when i took my first programming
+            class that i discovered i had
+            <a href="https://www.youtube.com/watch?v=CmYDgncMhXw" class="inflate">
+              "the knack"</a>.
+            I am a tinkerer and love solving complex problems both physical and
+            theoretical. I have a strong attention to detail and can laser focus
+            in on a project until completion which gives me a great advantage over
+             my peers. I know various programming languages and have experience in
+              software development in many forms. </p>
       </div>
     </div>
   </div>
@@ -414,7 +410,7 @@
   <!-- Container (Skills Section) -->
   <div id="skills" class="container text-center" style="padding-top:60px">
     <h2>Top Skills</h2>
-    <h4>What i can do</h4>
+    <h4>What I do</h4>
     <br>
     <div class="row slideanim">
       <div class="col-sm-3">
@@ -542,9 +538,11 @@
     <div class="row text-center">
       <h2>Resume</h2>
     </div>
-    <div class="row text-center">
-      <h4>Check it out.</h4><a href="Resume.pdf" class="inflate">
-        <h1><span class="glyphicon glyphicon-download-alt"></span></a></h1>
+    <div class="text-center">
+        <h4>Check it out.</h4>
+          <a href="Resume.pdf">
+            <span class="glyphicon glyphicon-download-alt logo-small"></span>
+          </a>
     </div>
   </div>
 
@@ -554,7 +552,9 @@
     <div class="row">
       <div class="col-sm-5">
         <p>Contact me and I'll get back to you ASAP.</p>
-        <p><span class="glyphicon glyphicon-map-marker"></span> Murray, UT</p>
+        <p><a
+            href="https://www.google.com/maps/place/Murray,+UT/@40.6552133,-111.9524075,12z/data=!3m1!4b1!4m5!3m4!1s0x875263fadae0b523:0x69b0984d520dc4b0!8m2!3d40.6668916!4d-111.8879909" class="inflate">
+          <span class="glyphicon glyphicon-map-marker"></span></a> Murray, UT</p>
         <!--p><span class="glyphicon glyphicon-phone"></span> +1234567890</p-->
         <p><a href="mailto:tyler.scott.cs@gmail.com" class="inflate">
           <span class="glyphicon glyphicon-envelope"></span>
@@ -669,7 +669,7 @@
   <!--Footer-->
   <footer class="container text-center" style="padding-top:60px">
     <a href="#myPage" title="To Top" class="inflate">
-      <span class="glyphicon glyphicon-chevron-up"></span>
+      <span class="glyphicon glyphicon-chevron-up logo"></span>
     </a>
     <p>Return to top of page</p>
   </footer>
