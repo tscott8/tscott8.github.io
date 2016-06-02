@@ -9,7 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="RepoJS/repo.js"></script>
+  <script src="js/repo.js"></script>
   <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <!-- Latest compiled and minified CSS -->
@@ -21,37 +21,29 @@
       text-shadow: 1px 2px #000000;
       line-height: 1.8;
       color: white;
-      background-image: url("background.jpg");
+      background-image: url("images/background.jpg");
       background-size: auto;
     }
 
-    a:link {
-      color: gray;
-      background-color: transparent;
-      text-decoration: none;
-    }
-
+    a:link,
     a:visited {
       color: gray;
       background-color: transparent;
       text-decoration: none;
     }
 
-    a:hover {
-      color: #0080ff;
-      background-color: transparent;
+    a:hover,
+    a:active {
+        color: #0080ff;
+        background-color: transparent;
+    }
+    .inflate:hover {
       font-size: 120%;
     }
     .jumbotron a img:hover {
       webkit-box-shadow: 0px 0px 3px 5px #0080ff;
       -moz-box-shadow: 0px 0px 3px 5px #0080ff;
       box-shadow: 0px 0px 3px 5px #0080ff;
-    }
-
-    a:active {
-      color: #0080ff;
-      background-color: transparent;
-      text-decoration: bold;
     }
 
     h2 {
@@ -80,7 +72,9 @@
       margin-bottom: 20px;
       color: #0080ff;
     }
-
+    footer {
+      margin-bottom: 150%;
+    }
     pre {
       background-color: transparent;
     }
@@ -123,7 +117,6 @@
     .icon a img {
       width: 100px;
     }
-
     .repo .vg-container {
       max-width: 100%;
     }
@@ -221,7 +214,6 @@
     .nav-tabs li.active a {
       color: white !important;
       background-color: #0080ff !important;
-      font-size: 100%;
     }
 
     .navbar {
@@ -246,7 +238,6 @@
     .navbar-nav li.active a {
       color: white !important;
       background-color: #0080ff !important;
-      font-size: 100%;
     }
 
     .navbar-default .navbar-toggle,
@@ -315,10 +306,6 @@
     }
 
     @media screen and (max-width: 480px) {
-      /*.rez {
-        width: 300px;
-        height: 500px;
-      }*/
       .logo {
         font-size: 150px;
       }
@@ -354,7 +341,9 @@
   <div class="jumbotron text-center">
     <h1>Tyler Scott</h1>
     <a href="https://www.linkedin.com/in/tylerscottcs">
-      <img src="https://graph.facebook.com/1375378340/picture?&height=1000&width=1000" class="img-responsive img-circle margin" style="display:inline" alt="Click here for my LinkedIn Profile" width="350" height="350"></a>
+      <img src="https://graph.facebook.com/1375378340/picture?&height=1000&width=1000"
+      class="img-responsive img-circle margin" style="display:inline"
+      alt="Click here for my LinkedIn Profile" width="350" height="350"></a>
     <h3>Developer. Adventurer. Leader.</h3>
   </div>
 
@@ -370,8 +359,14 @@
           <li>Major: Computer Science</li>
           <li>Graduation: April 2017</li>
           <li>Status: Student + Freelance Programmer</li>
-          <li>Occupation: Software Engineering Intern @ <a href="https://www.instructure.com/">INSTRUCTURE</a></li>
-          <li>Location: Murray, UT <a href="none.jpg"><span class="glyphicon glyphicon-map-marker"></span></a></li>
+          <li>Occupation: Software Engineering Intern @
+            <a href="https://www.instructure.com/" class="inflate">INSTRUCTURE</a>
+          </li>
+          <li>Location: Murray, UT
+            <a href="none.jpg" class="inflate">
+              <span class="glyphicon glyphicon-map-marker"></span>
+            </a>
+          </li>
         </ul>
         <h4>Interests/Hobbies:</h4>
         <ul>
@@ -399,12 +394,19 @@
         <span class="glyphicon glyphicon-globe logo slideanim"></span>
       </div>
       <div class="col-sm-8">
-
-        <h4><strong>GOAL:</strong> <br>My goal is to Graduate with BS in Computer Science and learn as much as i can about Programming</h4>
+        <h4><strong>GOAL:</strong> To Graduate with BS in Computer Science
+          and learn as much as i can about Programming</h4>
         <br>
-        <p><strong>VISION:</strong> I grew up around technology my whole life, however it wasnt until my freshman year when i took my first programming class that i discovered i had <a href="https://www.youtube.com/watch?v=CmYDgncMhXw">"the knack"</a>. I
-          am a tinkerer and love solving complex problems both physical and theoretical. I have a strong attention to detail and can laser focus in on a project until completion which gives me a great advantage over my peers. I know various programming
-          languages and have experience in software development in many forms. </p>
+        <p><strong>VISION:</strong> I grew up around technology my whole life,
+          however it wasnt until my freshman year when i took my first programming
+          class that i discovered i had
+          <a href="https://www.youtube.com/watch?v=CmYDgncMhXw" class="inflate">
+            "the knack"</a>.
+          I am a tinkerer and love solving complex problems both physical and
+          theoretical. I have a strong attention to detail and can laser focus
+          in on a project until completion which gives me a great advantage over
+           my peers. I know various programming languages and have experience in
+            software development in many forms. </p>
       </div>
     </div>
   </div>
@@ -436,7 +438,6 @@
         <p>For makin cool stuff</p>
       </div>
     </div>
-
     <div class="row slideanim" style="padding-top:30px">
       <div class="col-sm-3">
         <span class="glyphicon glyphicon-usd logo-small"></span>
@@ -462,7 +463,8 @@
   </div>
 
   <!-- Container (Portfolio Section) -->
-  <div id="portfolio" class="container text-center bg-grey" style="padding-top:60px">
+  <div id="portfolio" class="container text-center bg-grey"
+    style="padding-top:60px">
     <div class="row container">
       <h2 class="text-center">Portfolio</h2>
     </div>
@@ -478,217 +480,222 @@
       </ul>
 
       <div class="tab-content text-left">
-                <div id="home" class="tab-pane fade in active">
-                    <h4>Git Repository</h4>
-                    <p>Here lies all my source code i am willing to publish, use at your own risk...
-                        <br>
-                        <div id="repo1" style="text-shadow:none"></div>
-                    </p>
-                </div>
-                <div id="menu1" class="tab-pane fade">
-                    <h4>Tableiness</h4>
-                    <p>A Java Program built to generate truth tables to assist Discrete Math students.
-                        <br>
-                        <div id="repo2" style="text-shadow:none"></div>
-                    </p>
-                </div>
-                <div id="menu2" class="tab-pane fade">
-                    <h4>SuperRecruiter</h4>
-                    <p>A mini Linked-In like App, still has a lot of room to grow</p>
-                    <iframe src="http://tscott8.github.io/cs313/Startup.html"></iframe>
-                    <p>for full demo click <a href="http://tscott8.github.io/cs313/Startup.html">here</a>
-                        <br>
-                        <div id="repo3" style="text-shadow:none"></div>
-                    </p>
-                </div>
-                <div id="menu3" class="tab-pane fade">
-                    <h4>Walle+Eva</h4>
-                    <p>Raspberry Pi based laser tag robot tanks</p>
-                </div>
-                <div id="menu4" class="tab-pane fade">
-                    <h4>TripCast</h4>
-                    <p>An app to help you map the weather before a trip</p>
-                    <iframe src="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html"></iframe>
-                    <p>for full demo click <a href="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html">here</a>
-                        <br>
-                        <div id="repo4" style="text-shadow:none"></div>
-                    </p>
-                </div>
-                <div id="menu5" class="tab-pane fade">
-                    <h4>Von Neumann Architecture 3D Demo</h4>
-                    <iframe src="http://tscott8.github.io/VNAness/VNADemo.html"></iframe>
-                    <p>for full demo click <a href="http://tscott8.github.io/VNAness/VNADemo.html">here</a>
-                        <br>
-                        <div id="repo5" style="text-shadow:none"></div>
-                    </p>asd
-                </div>
-            </div>
+        <div id="home" class="tab-pane fade in active">
+          <h4>Git Repository</h4>
+          <p>Here lies all my source code i am willing to publish,
+              use at your own risk...
+            <br>
+            <div id="repo1" style="text-shadow:none"></div>
+          </p>
         </div>
-      <hr style="width:100%" />
+        <div id="menu1" class="tab-pane fade">
+          <h4>Tableiness</h4>
+          <p>A Java Program built to generate truth tables to assist
+              Discrete Math students.
+            <br>
+            <div id="repo2" style="text-shadow:none"></div>
+          </p>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+          <h4>SuperRecruiter</h4>
+          <p>A mini Linked-In like App, still has a lot of room to grow</p>
+          <iframe src="http://tscott8.github.io/cs313/Startup.html"></iframe>
+          <p>for full demo click
+            <a href="http://tscott8.github.io/cs313/Startup.html"
+              class="inflate">here</a>
+            <br>
+            <div id="repo3" style="text-shadow:none"></div>
+          </p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+          <h4>Walle+Eva</h4>
+          <p>Raspberry Pi based laser tag robot tanks</p>
+        </div>
+        <div id="menu4" class="tab-pane fade">
+          <h4>TripCast</h4>
+          <p>An app to help you map the weather before a trip</p>
+          <iframe src="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html"></iframe>
+          <p>for full demo click
+            <a href="http://tscott8.github.io/TripCast/WeatherAppStore/src/main/webapp/appStore.html"
+              class="inflate">here</a>
+            <br>
+            <div id="repo4" style="text-shadow:none"></div>
+          </p>
+        </div>
+        <div id="menu5" class="tab-pane fade">
+          <h4>Von Neumann Architecture 3D Demo</h4>
+          <iframe src="http://tscott8.github.io/VNAness/VNADemo.html"></iframe>
+          <p>for full demo click
+            <a href="http://tscott8.github.io/VNAness/VNADemo.html"
+              class="inflate">here</a>
+            <br>
+            <div id="repo5" style="text-shadow:none"></div>
+          </p>
+        </div>
+      </div>
     </div>
+    <hr style="width:100%" />
+  </div>
 
-    <!-- Container (Resume Section) -->
-    <div id="resume" class="container" style="padding-top:60px">
-      <div class="row text-center">
-        <h2>Resume</h2>
-      </div>
-      <div class="row text-center">
-        <h4>Check it out.<a href="Resume.pdf"></h4>
-          <h1><span class="glyphicon glyphicon-download-alt"></span></a></h1>
-      </div>
+  <!-- Container (Resume Section) -->
+  <div id="resume" class="container" style="padding-top:60px">
+    <div class="row text-center">
+      <h2>Resume</h2>
     </div>
-    <!-- Container (Contact Section) -->
-    <div id="contact" class="container bg-grey" style="padding-top:60px">
-      <h2 class="text-center">CONTACT</h2>
-      <div class="row">
-        <div class="col-sm-5">
-          <p>Contact me and I'll get back to you ASAP.</p>
-          <p><span class="glyphicon glyphicon-map-marker"></span> Murray, UT</p>
-          <!--p><span class="glyphicon glyphicon-phone"></span> +1234567890</p-->
-          <p><a href="mailto:tyler.scott.cs@gmail.com"><span class="glyphicon glyphicon-envelope"></span></a> tyler.scott.cs@gmail.com</p>
-        </div>
-        <div class="col-sm-7 slideanim">
-          <div class="row">
-            <div class="col-sm-6 form-group">
-              <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
-            </div>
-            <div class="col-sm-6 form-group">
-              <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
-            </div>
+    <div class="row text-center">
+      <h4>Check it out.</h4><a href="Resume.pdf" class="inflate">
+        <h1><span class="glyphicon glyphicon-download-alt"></span></a></h1>
+    </div>
+  </div>
+
+  <!-- Container (Contact Section) -->
+  <div id="contact" class="container bg-grey" style="padding-top:60px">
+    <h2 class="text-center">CONTACT</h2>
+    <div class="row">
+      <div class="col-sm-5">
+        <p>Contact me and I'll get back to you ASAP.</p>
+        <p><span class="glyphicon glyphicon-map-marker"></span> Murray, UT</p>
+        <!--p><span class="glyphicon glyphicon-phone"></span> +1234567890</p-->
+        <p><a href="mailto:tyler.scott.cs@gmail.com" class="inflate">
+          <span class="glyphicon glyphicon-envelope"></span>
+        </a> tyler.scott.cs@gmail.com</p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name"
+              placeholder="Name" type="text" required>
           </div>
-          <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-          <br>
-          <div class="row">
-            <div class="col-sm-12 form-group">
-              <button class="btn btn-primary pull-right" type="submit" id="form-submit">Send</button>
-            </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email"
+              placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments"
+          placeholder="Comment" rows="5"></textarea>
+        <br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-primary pull-right" type="submit"
+              id="form-submit">Send</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Container (Online Presence) -->
-    <div id="profiles" class="container text-center" style="padding-top:60px">
-
-      <h2>Online Presence</h2>
-      <h4>Some more Profiles</h4>
-      <div class="row slideanim">
-        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <h4><div class="icon">
-                            <a href="http://steamcommunity.com/id/BigTScott">
-                              <img src="steam icon.png" alt="Steam"></a>
-                              <p><strong>Steam</strong></p>
-                            </div></h4>
-            </div>
-            <div class="item">
-              <h4><div class="icon">
-                              <a href="https://www.facebook.com/BigT.Scott">
-                                <img src="fb icon.png" alt="Facebook"></a>
-                                <p><strong>Facebook</strong></p>
-                              </div></h4>
-            </div>
-            <div class="item">
-              <h4><div class="icon">
-                                <a href="https://www.linkedin.com/in/tylerscottcs">
-                                  <img src="linkedin icon.png" alt="LinkedIn"></a>
-                                  <p><strong>LinkedIn</strong></p>
-                                </div></h4>
-            </div>
-            <div class="item">
-              <h4><div class="icon">
-                                  <a href="https://github.com/tscott8">
-                                    <img src="github icon.png" alt="GitHub"></a>
-                                    <p><strong>GitHub</strong></p>
-                                  </div></h4>
-            </div>
-            <div class="item">
-              <h4><div class="icon">
-                                    <a href="http://us.battle.net/d3/en/profile/BigTScott-1628/hero/53566837">
-                                      <img src="d3 icon.png" alt="D3"></a>
-                                      <p><strong>Diablo III</strong></p>
-                                    </div></h4>
-            </div>
+  <!-- Container (Online Presence) -->
+  <div id="profiles" class="container text-center" style="padding-top:60px">
+    <h2>Online Presence</h2>
+    <h4>Some more Profiles</h4>
+    <div class="row slideanim">
+      <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <h4>
+              <div class="icon">
+                <a href="http://steamcommunity.com/id/BigTScott">
+                  <img src="images/steam icon.png" alt="Steam">
+                </a>
+                <p><strong>Steam</strong></p>
+              </div>
+            </h4>
           </div>
-
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="item">
+            <h4>
+              <div class="icon">
+                <a href="https://www.facebook.com/BigT.Scott">
+                  <img src="images/fb icon.png" alt="Facebook">
+                </a>
+                <p><strong>Facebook</strong></p>
+              </div>
+            </h4>
+          </div>
+          <div class="item">
+            <h4>
+              <div class="icon">
+                <a href="https://www.linkedin.com/in/tylerscottcs">
+                  <img src="images/linkedin icon.png" alt="LinkedIn">
+                </a>
+                <p><strong>LinkedIn</strong></p>
+              </div>
+            </h4>
+          </div>
+          <div class="item">
+            <h4>
+              <div class="icon">
+                <a href="https://github.com/tscott8">
+                  <img src="images/github icon.png" alt="GitHub">
+                </a>
+                <p><strong>GitHub</strong></p>
+              </div>
+            </h4>
+          </div>
+          <div class="item">
+            <h4>
+              <div class="icon">
+                <a href="http://us.battle.net/d3/en/profile/BigTScott-1628/hero/53566837">
+                  <img src="images/d3 icon.png" alt="D3">
+                </a>
+                <p><strong>Diablo III</strong></p>
+              </div>
+            </h4>
+          </div>
         </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button"
+          data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button"
+          data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
-    <!--Footer-->
-    <footer class="container text-center" style="padding-top:60px">
-      <a href="#myPage" title="To Top">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-      </a>
-      <p>Return to top of page</p>
-    </footer>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+  </div>
+
+  <!--Footer-->
+  <footer class="container text-center" style="padding-top:60px">
+    <a href="#myPage" title="To Top" class="inflate">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <p>Return to top of page</p>
+  </footer>
 
   <script>
-    $('#repo1').repo({
-      user: 'tscott8',
-      name: 'tscott8.github.io'
-    });
-    $('#repo2').repo({
-      user: 'BryceLawrence',
-      name: 'Tableiness'
-    });
-    $('#repo3').repo({
-      user: 'tscott8',
-      name: 'cs313'
-    });
-    $('#repo4').repo({
-      user: 'tscott8',
-      name: 'TripCast'
-    });
-    $('#repo5').repo({
-      user: 'tscott8',
-      name: 'VNAness'
-    });
     $(document).ready(function() {
-
+      $('#repo1').repo({
+        user: 'tscott8',
+        name: 'tscott8.github.io'
+      });
+      $('#repo2').repo({
+        user: 'BryceLawrence',
+        name: 'Tableiness'
+      });
+      $('#repo3').repo({
+        user: 'tscott8',
+        name: 'cs313'
+      });
+      $('#repo4').repo({
+        user: 'tscott8',
+        name: 'TripCast'
+      });
+      $('#repo5').repo({
+        user: 'tscott8',
+        name: 'VNAness'
+      });
       $(document).on('click', '.navbar-collapse.in', function(e) {
         if ($(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle') {
           $(this).collapse('hide');
@@ -696,29 +703,24 @@
       });
       // Add smooth scrolling to all links in navbar + footer link
       $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
         // Prevent default anchor click behavior
         event.preventDefault();
-
         // Store hash
         var hash = this.hash;
-
         // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+        // The optional number (900) specifies the number of milliseconds
+        // it takes to scroll to the specified area
         $('html, body').animate({
           scrollTop: $(hash).offset().top
         }, 900, function() {
-
           // Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash;
         });
       });
-
       // Slide in elements on scroll
       $(window).scroll(function() {
         $(".slideanim").each(function() {
           var pos = $(this).offset().top;
-
           var winTop = $(window).scrollTop();
           if (pos < winTop + 600) {
             $(this).addClass("slide");
@@ -727,7 +729,5 @@
       });
     })
   </script>
-
 </body>
-
 </html>
