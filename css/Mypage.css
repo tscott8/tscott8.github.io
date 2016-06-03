@@ -9,23 +9,23 @@ body {
 
 a:link,
 a:visited {
-  color: gray;
+  color: #337ab7;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover,
 a:active {
-    color: #0080ff;
+    color: #286090;
     background-color: transparent;
 }
 .inflate:hover {
-  font-size: 120%;
+  font-size: 110%;
 }
 .jumbotron a img:hover {
-  webkit-box-shadow: 0px 0px 3px 5px #0080ff;
-  -moz-box-shadow: 0px 0px 3px 5px #0080ff;
-  box-shadow: 0px 0px 3px 5px #0080ff;
+  -webkit-box-shadow: 0px 0px 3px 5px #337ab7;
+  -moz-box-shadow: 0px 0px 3px 5px #337ab7;
+  box-shadow: 0px 0px 3px 5px #337ab7;
 }
 
 h2 {
@@ -52,7 +52,7 @@ iframe {
 footer .glyphicon {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #0080ff;
+  color: #337ab7;
 }
 pre {
   background-color: transparent;
@@ -82,12 +82,12 @@ pre {
 }
 
 .logo-small {
-  color: #0080ff;
+  color: #337ab7;
   font-size: 50px;
 }
 
 .logo {
-  color: #0080ff;
+  color: #337ab7;
   font-size: 200px;
 }
 
@@ -101,15 +101,15 @@ pre {
 .carousel-control.right,
 .carousel-control.left {
   background-image: none;
-  color: #0080ff;
+  color: #337ab7;
 }
 
 .carousel-indicators li {
-  border-color: #0080ff;
+  border-color: #337ab7;
 }
 
 .carousel-indicators li.active {
-  background-color: #0080ff;
+  background-color: #337ab7;
 }
 
 .item h4 {
@@ -152,7 +152,7 @@ pre {
 }
 
 .panel-footer {
-  background-color: #0080ff !important;
+  background-color: #337ab7 !important;
 }
 
 .panel-footer h3 {
@@ -190,7 +190,7 @@ pre {
 .nav-tabs li a:hover,
 .nav-tabs li.active a {
   color: white !important;
-  background-color: #0080ff !important;
+  background-color: #337ab7 !important;
 }
 
 .navbar {
@@ -214,7 +214,7 @@ pre {
 .navbar-nav li a:hover,
 .navbar-nav li.active a {
   color: white !important;
-  background-color: #0080ff !important;
+  background-color: #337ab7 !important;
 }
 
 .navbar-default .navbar-toggle,
@@ -230,7 +230,7 @@ pre {
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:active {
-  background-color: #0080ff;
+  background-color: #337ab7;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
