@@ -1,0 +1,88 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Tyler Scott
+	email = tybugman@hotmail.com
+[core]
+	editor = atom -n -w
+
+[credential]
+  helper = osxkeychain
+
+[url "https://github.com/"]
+  insteadOf = gh: #allows you to do git clone gh:<user>/<repo> and other cool stuff
+[url "https://gist.github.com/"]
+  insteadOf = gist:
+[url "https://bitbucket.org/"]
+  insteadOf = bb:
+
+[color]
+  ui = true
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = red
+
+[alias]
+  #logging
+  l1 = log --pretty=format:'%C(magenta)%h %C(white)%s'
+  ls = log --pretty=format:'%C(magenta)%h %Cgreen%cd %C(white)%s' --date=short #small
+  l = log --pretty=format:'%C(magenta)%h %C(white)%s %Cgreen(%cr) %Cblue[%cn]' --abbrev-commit #medium
+  lg = !git log --graph --pretty=format:'%C(magenta)%h %Cgreen%cd%C(yellow)%d %C(white)%s %Cblue[%an]%Creset' --abbrev-commit --date=short  #large
+  lstat = log --pretty=format:'%C(magenta)%h %C(white)%s %Cgreen(%cr) %Cblue[%cn]' --decorate --stat #statted
+  llast = log -p -1 #last commit
+  lme  = !UN=$(git config user.name)&& git log --author="\"$UN\"" --pretty=format:'%C(magenta)%h %Cgreen%cd %C(white)%s' --date=short #my commits
+
+  #adding
+  a = add
+  ap = add -p
+  ac = !git add . && git commit -am #adds all and commits with <message>
+
+  #committing
+  c = commit
+  ca = commit -a
+  cm = commit -m
+  cam = commit -a -m
+  ammend = commit --amend
+  undo-commit = reset --soft HEAD~1 #reverts a commit
+
+  #push/pulling
+  p = pull
+  pr = pull --rebase
+  pu = push origin HEAD:refs/for/master
+  pom = push origin master
+  cl = clone
+
+  #diffing
+  d = diff
+  ds = diff --stat
+  dc = diff --cached
+
+  #checking
+  s = status -s
+  co = checkout
+  cob = checkout -b
+  cres = checkout -- . #resets the branch
+
+  #branching
+  b = branch
+  bname = !git branch | grep "^*" | awk '{ print $2 }' # Show the current branch name (useful for shell prompts)
+  ball = branch -av #all the branches
+  bdel = branch -D
+  bmod = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'" # list branches sorted by last modified
+  bclean = !git branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d   #removes branches that have already been merged into master
+
+
+  # list aliases
+  la = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\ \t => \\2/' | sort
