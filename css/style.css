@@ -1,0 +1,110 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ nav ul a:hover{
+   background-color: rgba(0, 0, 0, 0.1);
+ }
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+/*
+.button-collapse {
+  color: #26a69a;
+}*/
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+  .online {
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+  .online {
+    display: none;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/*************************************************************************/
+.nav-wrapper li:hover,
+.side-nav li:hover,
+.dropdown-content li:hover,
+.nav-wrapper li.active a,
+.side-nav li.active a,
+.dropdown-content li.active a {
+  background-color: #26a69a;
+}
+
+.dropdown-content {
+  margin-top: 48px;
+  border: 1px solid white;
+}
+.mylogo {
+  max-width: 80px;
+  max-height:100%;
+  vertical-align: middle;
+}
+.myavatar {
+  display: inline;
+}
+.bullets{
+  margin-left: 15px;
+}
+.bullets li{
+  list-style-type: circle;
+}
+.card: {
+  border-radius: 5px !important;
+
+}
+.card:hover {
+  box-shadow: 0 0 5px 5px  #26a69a;
+}
+.myicon {
+  max-width: 100%;
+}
+.languages i{
+  font-size: 5em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+
+}
