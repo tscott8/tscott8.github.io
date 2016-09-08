@@ -22,7 +22,7 @@ document.write('\
           <li><a class="white-text" href="index.html#about">ABOUT ME</a></li>\
           <li><a class="white-text" href="index.html#skills">SKILLS</a></li>\
           <li><a class="white-text dropdown-button" href="portfolio.html" data-activates="portfolioDrop">PORTFOLIO<i class="material-icons right white-text">arrow_drop_down</i></a></li>\
-          <li><a class="white-text" href="resume.pdf">RESUME</a></li>\
+          <li><a class="white-text" href="Resume.pdf">RESUME</a></li>\
           <li><a class="white-text" href="index.html#contact">CONTACT</a></li>\
           <li><a class="white-text" href="index.html#profiles">ONLINE PRESENCE</a></li>\
         </ul>\
@@ -30,7 +30,7 @@ document.write('\
           <li><a class="white-text" href="index.html#about">ABOUT ME</a></li>\
           <li><a class="white-text" href="index.html#skills">SKILLS</a></li>\
           <li><a class="white-text dropdown-button" href="portfolio.html" data-activates="portfolioDrop-mobile">PORTFOLIO<i class="material-icons right  white-text">arrow_drop_down</i></a></li>\
-          <li><a class="white-text" href="resume.pdf">RESUME</a></li>\
+          <li><a class="white-text" href="Resume.pdf">RESUME</a></li>\
           <li><a class="white-text" href="index.html#contact">CONTACT</a></li>\
           <li><a class="white-text" href="index.html#profiles">ONLINE PRESENCE</a></li>\
       </ul>\
