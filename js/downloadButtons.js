@@ -9,7 +9,7 @@ document.write('\
                 <h5 class="header col s12 light">Developer. Adventurer. Leader.</h5>\
             </div>\
             <div class="row center">\
-                <a href="resume.pdf" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Download Resume <i class="small right material-icons">file_download</i></a>\
+                <a href="Resume.pdf" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Download Resume <i class="small right material-icons">file_download</i></a>\
             </div>\
             <br>\
             <br>\
@@ -19,7 +19,7 @@ document.write('\
     <div class="parallax"><img src="images/swoop.jpg" alt="Unsplashed background img 1"></div>\
 </div>\
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">\
-    <a href="resume.pdf" class="btn-floating btn-large teal tooltipped" data-position="left" data-delay="50" data-tooltip="Download Resume">\
+    <a href="Resume.pdf" class="btn-floating btn-large teal tooltipped" data-position="left" data-delay="50" data-tooltip="Download Resume">\
       <i class="large material-icons">file_download</i>\
     </a>\
     <ul class="online">\
