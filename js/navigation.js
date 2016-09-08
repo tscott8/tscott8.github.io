@@ -28,7 +28,7 @@ document.write('\
         <ul class="side-nav grey darken-4" id="nav-mobile">\
           <li><a class="white-text" href="index.html#about">ABOUT ME</a></li>\
           <li><a class="white-text" href="index.html#skills">SKILLS</a></li>\
-          <li><a class="white-text dropdown-button" href="portfolio.html" data-induration="300" data-outduration="225" data-beloworigin="true" data-hover="true"data-activates="portfolioDrop-mobile">PORTFOLIO<i class="material-icons right  white-text">arrow_drop_down</i></a></li>\
+          <li><a class="white-text dropdown-button" href="portfolio.html" data-induration="300" data-outduration="225" data-beloworigin="true" data-activates="portfolioDrop-mobile">PORTFOLIO<i class="material-icons right  white-text">arrow_drop_down</i></a></li>\
           <li><a class="white-text" href="Resume.pdf">RESUME</a></li>\
           <li><a class="white-text" href="index.html#contact">CONTACT</a></li>\
       </ul>\
