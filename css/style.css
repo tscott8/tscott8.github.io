@@ -75,7 +75,6 @@ footer.page-footer {
 }
 
 .dropdown-content {
-  margin-top: 48px;
   border: 1px solid white;
 }
 .mylogo {
@@ -106,5 +105,7 @@ footer.page-footer {
   font-size: 5em;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
-
+}
+.myquote {
+  text-shadow: 2px 2px black;
 }
