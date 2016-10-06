@@ -53,9 +53,8 @@ p {
     display: none;
   }
 }
-
 .icon-block {
-  padding: 0 15px;
+  /*padding: 0 15px;*/
 }
 .icon-block .material-icons {
   font-size: inherit;
@@ -83,21 +82,11 @@ footer.page-footer {
   max-height:100%;
   vertical-align: middle;
 }
-.myavatar {
-  display: inline;
-}
-.bullets li{
-  line-height: 2rem;
-  text-align: justify;
-  margin-bottom: 0.5em;
-  text-indent: 1.5em;
-}
-.bullets i {
+.bullet-icon {
   margin-right: 0.75em;
 }
 .card: {
   border-radius: 5px !important;
-
 }
 .card:hover {
   box-shadow: 0 0 5px 5px  #26a69a;
@@ -112,4 +101,7 @@ footer.page-footer {
 }
 .myquote {
   text-shadow: 2px 2px black;
+}
+.icon-block {
+  height: inherit;
 }
