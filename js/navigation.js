@@ -7,6 +7,7 @@ document.write('\
     <li><a class="white-text" href="portfolio.html#tripCast">TripCast</a></li>\
     <li><a class="white-text" href="portfolio.html#VNAness">Vonn Neumann Architecture Demo</a></li>\
     <li><a class="white-text" href="portfolio.html#Shift">Shift</a></li>\
+    <li><a class="white-text" href="portfolio.html#Arcane">Arcane</a></li>\
   </ul>\
   <ul id="portfolioDrop-mobile" class="dropdown-content dropdown-content-mobile grey darken-4">\
     <li><a class="white-text" href="portfolio.html#tableiness">Tableiness</a></li>\
@@ -15,6 +16,7 @@ document.write('\
     <li><a class="white-text" href="portfolio.html#tripCast">TripCast</a></li>\
     <li><a class="white-text" href="portfolio.html#VNAness">Vonn Neumann Architecture Demo</a></li>\
     <li><a class="white-text" href="portfolio.html#Shift">Shift</a></li>\
+    <li><a class="white-text" href="portfolio.html#Arcane">Arcane</a></li>\
   </ul>\
   <nav class="grey darken-4" role="navigation">\
     <div class="nav-wrapper container">\
