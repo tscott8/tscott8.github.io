@@ -1,23 +1,20 @@
+var array = [
+  {label:'Tableiness', url:'portfolio.html#tableiness'},
+  {label:'SuperRecruiter', url:'portfolio.html#superRecruiter'},
+  {label:'Walle & Eva', url:'portfolio.html#walleEva'},
+  {label:'TripCast', url:'portfolio.html#tripCast'},
+  {label:'Vonn Neumann Architecture Demo', url:'portfolio.html#VNAness'},
+  {label:'Shift', url:'portfolio.html#Shift'},
+  {label:'Arcane', url:'portfolio.html#Arcane'},
+]
+var pEl = $.map(array, function(obj, i) {
+  return '<li><a class="white-text" href="'+obj.url+'">'+obj.label+'</a></li>';
+});
+
 document.write('\
 <div class="navbar-fixed">\
-  <ul id="portfolioDrop" class="dropdown-content grey darken-4">\
-    <li><a class="white-text" href="portfolio.html#tableiness">Tableiness</a></li>\
-    <li><a class="white-text" href="portfolio.html#superRecruiter">SuperRecruiter</a></li>\
-    <li><a class="white-text" href="portfolio.html#walleEva">Walle & Eva</a></li>\
-    <li><a class="white-text" href="portfolio.html#tripCast">TripCast</a></li>\
-    <li><a class="white-text" href="portfolio.html#VNAness">Vonn Neumann Architecture Demo</a></li>\
-    <li><a class="white-text" href="portfolio.html#Shift">Shift</a></li>\
-    <li><a class="white-text" href="portfolio.html#Arcane">Arcane</a></li>\
-  </ul>\
-  <ul id="portfolioDrop-mobile" class="dropdown-content dropdown-content-mobile grey darken-4">\
-    <li><a class="white-text" href="portfolio.html#tableiness">Tableiness</a></li>\
-    <li><a class="white-text" href="portfolio.html#superRecruiter">SuperRecruiter</a></li>\
-    <li><a class="white-text" href="portfolio.html#walleEva">Walle & Eva</a></li>\
-    <li><a class="white-text" href="portfolio.html#tripCast">TripCast</a></li>\
-    <li><a class="white-text" href="portfolio.html#VNAness">Vonn Neumann Architecture Demo</a></li>\
-    <li><a class="white-text" href="portfolio.html#Shift">Shift</a></li>\
-    <li><a class="white-text" href="portfolio.html#Arcane">Arcane</a></li>\
-  </ul>\
+  <ul id="portfolioDrop" class="dropdown-content grey darken-4">'+pEl.join("")+'</ul>\
+  <ul id="portfolioDrop-mobile" class="dropdown-content dropdown-content-mobile grey darken-4">'+pEl.join("")+'</ul>\
   <nav class="grey darken-4" role="navigation">\
     <div class="nav-wrapper container">\
         <a href="#!" class="brand-logo"> <img class="mylogo" src="images/logo.png" /></a>\

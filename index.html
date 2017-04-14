@@ -11,10 +11,13 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+  <script src="https://use.fontawesome.com/0440bf9697.js"></script>
+
 
 </head>
 
 <body class="grey darken-4 white-text">
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/navigation.js"></script>
   <script src="js/downloadButtons.js"></script>
 
@@ -22,35 +25,61 @@
     <div class="section">
       <div class="row">
         <h4 class="col s12 center">About Me</h4>
-        <div class="col s12 m4 l4 center">
-          <div class="icon-block">
-            <br>
+        <div class="col s12 m4">
+          <div class="icon-block center">
             <a class="" href="https://www.linkedin.com/in/tylerscottcs">
-              <img src="https://graph.facebook.com/1375378340/picture?&height=1000&width=1000" class="circle responsive-img avatar z-depth-3 tooltipped" data-position="bottom" data-delay="50" data-tooltip="Click for my LinkedIn profile" alt="Click here for my LinkedIn Profile"></a>
-          </div>
+              <img src="https://graph.facebook.com/1375378340/picture?&height=1000&width=1000" class="circle responsive-img avatar z-depth-3 tooltipped myavatar" data-position="bottom" data-delay="50" data-tooltip="Click for my LinkedIn profile" alt="Click here for my LinkedIn Profile" /></a>
         </div>
-        <div class="col s12 m5 l4">
+        </div>
+        <div class="col s7 m4">
           <div class="icon-block">
-            <h2 class="center blue-text"><i class="material-icons">perm_identity</i></h2>
+            <h2 class="center blue-text"><i class="material-icons">person</i></h2>
             <h5 class="center">Quick View</h5>
-            <p class="row">
-              <span class="col s10 offset-s2 bullet"><i class="large material-icons blue-text bullet-icon">school</i>Major: Computer Science</span>
-              <span class="col s10 offset-s2 bullet"><i class="large material-icons blue-text bullet-icon">school</i>University: BYU-Idaho</span>
-              <span class="col s10 offset-s2 bullet"><i class="large material-icons blue-text bullet-icon">school</i>Graduation: April 2017</span>
-              <span class="col s10 offset-s2 bullet"><a href="https://www.instructure.com/" class="inflate teal-text" ><i class="material-icons blue-text tooltipped bullet-icon" data-position="left" data-delay="50" data-tooltip="INSTRUCTURE">business</i></a>Occupation: Software Eng. Intern</span>
-              <span class="col s10 offset-s2 bullet"><a href="https://www.google.com/maps/place/Rexburg,+ID/@43.8300452,-111.8232023,13z/data=!3m1!4b1!4m5!3m4!1s0x53540a4b807a98b1:0x4a49d8d1d2181c73!8m2!3d43.8231096!4d-111.7924237" class="inflate teal-text"><i class="large material-icons blue-text bullet-icon">place</i></a>Location: Rexburg, ID</span>
+            <p class="light">
+            <span class="col s12 offset-m2 bullet">
+              <a href="" class="inflate teal-text" >
+                <i class="large material-icons blue-text tooltipped bullet-icon" data-position="left" data-delay="50" data-tooltip="Degree">school</i>
+              </a>B.S. Computer Science
+            </span>
+              <span class="col s12 offset-m2 bullet">
+                <a href="https://www.byui.edu/" class="inflate teal-text" >
+                  <i class="large material-icons blue-text tooltipped bullet-icon" data-position="left" data-delay="50" data-tooltip="Graduating Class of April 2017">location_city</i>
+                </a>Brigham Young University - Idaho
+              </span>
+              <span class="col s12 offset-m2 bullet">
+                <a href="" class="inflate teal-text" >
+                  <i class="material-icons blue-text tooltipped bullet-icon" data-position="left" data-delay="50" data-tooltip="Occupation">business</i>
+                </a>Software Engineer
+              </span>
+              <span class="col s12 offset-m2 bullet">
+                <a href="https://www.google.com/maps/place/Highlands+Ranch,+CO/@39.5384234,-105.011396,13z/data=!3m1!4b1!4m5!3m4!1s0x876c82f082d15d0b:0x11f163cd6b8cdb49!8m2!3d39.5480789!4d-104.9739333" class="inflate teal-text">
+                  <i class="material-icons blue-text tooltipped bullet-icon" data-position="left" data-delay="50" data-tooltip="Location">place</i>
+                </a>Denver, CO
+              </span>
             </p>
           </div>
         </div>
-        <div class="col s12 m3 l4">
+        <div class="col s5 m4">
           <div class="icon-block">
             <h2 class="center blue-text"><i class="material-icons">videogame_asset</i></h2>
             <h5 class="center">Interests</h5>
-            <p class="row">
-              <span class="col s10 offset-s2 bullet"><i class="large material-icons blue-text bullet-icon">computer</i><span class="tooltipped" data-position="right" data-delay="50" data-tooltip="Software, Hardware, Operating Systems...">Computers</span></span>
-              <span class="col s10 offset-s2 bullet"><i class="large material-icons blue-text bullet-icon">devices_other</i><span class="tooltipped" data-position="right" data-delay="50" data-tooltip="Embedded systems, random gadgets, sound systems...">Technology</span></span>
-              <span class="col s10 offset-s2 bullet"><i class="large material-icons blue-text bullet-icon">build</i><span class="tooltipped" data-position="right" data-delay="50" data-tooltip="Frontend, backend, web, mobile, fullstack...">Programming</span></span>
-              <span class="col s10 offset-s2 bullet"><i class="large material-icons blue-text bullet-icon">directions_bike</i><span class="tooltipped" data-position="right" data-delay="50" data-tooltip="Snowboarding, Aggressive Mountain Biking, Video Games...">Sports</span></span>
+            <p class="light">
+              <span class="col s12 offset-m3 bullet">
+                <i class="large material-icons blue-text bullet-icon">computer</i>
+                <span class="tooltipped bullet-icon-text" data-position="right" data-delay="50" data-tooltip="Software, Hardware, Operating Systems...">Computers</span>
+              </span>
+              <span class="col s12 offset-m3 bullet">
+                <i class="large material-icons blue-text bullet-icon">devices_other</i>
+                <span class="tooltipped bullet-icon-text" data-position="right" data-delay="50" data-tooltip="Embedded systems, random gadgets, sound systems...">Technology</span>
+              </span>
+              <span class="col s12 offset-m3 bullet">
+                <i class="large material-icons blue-text bullet-icon">build</i>
+                <span class="tooltipped bullet-icon-text" data-position="right" data-delay="50" data-tooltip="Machine Learning, Web Dev, Mobile Apps, API's...">Programming</span>
+              </span>
+              <span class="col s12 offset-m3 bullet">
+                <i class="large material-icons blue-text bullet-icon">directions_bike</i>
+                <span class="tooltipped bullet-icon-text" data-position="right" data-delay="50" data-tooltip="Snowboarding, Aggressive Mountain Biking, Video Games...">Sports</span>
+              </span>
             </p>
           </div>
         </div>
@@ -59,13 +88,9 @@
   </div>
 
   <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
       <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light myquote"> "Measuring programming progress by lines of code is like measuring aircraft building progress by weight." - Bill Gates</h5>
-        </div>
+          <h5 class="light myquote valign center"> "Measuring programming progress by lines of code is like measuring aircraft building progress by weight." - Bill Gates</h5>
       </div>
-    </div>
     <div class="parallax"><img src="images/swoop.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
@@ -79,7 +104,7 @@
             <h2 class="center blue-text"><i class="material-icons">flash_on</i></h2>
             <h5 class="center">Highly Motivated</h5>
 
-            <p class="light">One of my greatest traits is the ability to focus on a project for ridiculously long periods of time. When I get dialed into a project I can push through and stay motivated until completion. I never give up.</p>
+            <p class="light justify">One of my greatest traits is the ability to focus on a project for ridiculously long periods of time. When I get dialed into a project I can push through and stay motivated until completion. I never give up.</p>
           </div>
         </div>
 
@@ -88,7 +113,7 @@
             <h2 class="center blue-text"><i class="material-icons">settings</i></h2>
             <h5 class="center">Strategic Development</h5>
 
-            <p class="light">When I am starting a project it is easy for me to see the big picture of what needs to be done. From there I am able to begin planning and designing every facet of the projects requirements. My colleages have told me that I "think in uml",
+            <p class="light justify">When I am starting a project it is easy for me to see the big picture of what needs to be done. From there I am able to begin planning and designing every facet of the projects requirements. My colleages have told me that I "think in uml",
               and I would agree with them. This makes it easy for me to pass on knowledge and lead others in developing clean, functional, and maitainable code.</p>
           </div>
         </div>
@@ -98,7 +123,7 @@
             <h2 class="center blue-text"><i class="material-icons">group</i></h2>
             <h5 class="center">Team Player</h5>
 
-            <p class="light">I have lots of team development experience and have no problem pairing and lending a hand when its needed. I also think that two minds are ALWAYS better than one and often add a safety net when you program. Code Review is essential to developing
+            <p class="light justify">I have lots of team development experience and have no problem pairing and lending a hand when its needed. I also think that two minds are ALWAYS better than one and often add a safety net when you program. Code Review is essential to developing
               a good product.</p>
           </div>
         </div>
@@ -108,13 +133,9 @@
   </div>
 
   <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
       <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light myquote">"Fail often in order to succeed sooner" - Tom Kelley</h5>
-        </div>
+          <h5 class="valign light myquote center">"Fail often in order to succeed sooner" - Tom Kelley</h5>
       </div>
-    </div>
     <div class="parallax"><img src="images/swoop.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
@@ -156,12 +177,8 @@
   </div>
 
   <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
       <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light myquote">"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." - Brian W. Kernighan.</h5>
-        </div>
-      </div>
+          <h5 class="valign light myquote center">"Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it." - Brian W. Kernighan.</h5>
     </div>
     <div class="parallax"><img src="images/swoop.jpg" alt="Unsplashed background img 3"></div>
   </div>
@@ -201,7 +218,6 @@
   </footer>
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script src="js/custom.js"></script>

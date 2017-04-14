@@ -15,8 +15,9 @@ nav .brand-logo {
 
 p {
   line-height: 2rem;
-  text-align: justify;
+  /*text-align: justify;*/
 }
+
 /*
 .button-collapse {
   color: #26a69a;
@@ -82,9 +83,15 @@ footer.page-footer {
   max-height:100%;
   vertical-align: middle;
 }
-.bullet-icon {
+.bullet-icon{
   margin-right: 0.75em;
 }
+.bullet-icon-text {
+  /*margin-right: 0.75em;*/
+  text-overflow: ellipsis;
+  flex-wrap: nowrap;
+}
+
 .card: {
   border-radius: 5px !important;
 }
@@ -94,6 +101,9 @@ footer.page-footer {
 .myicon {
   max-width: 100%;
 }
+.myicon2 {
+  width: 50px;
+}
 .languages i{
   font-size: 5em;
   margin-top: 0.25em;
@@ -101,7 +111,18 @@ footer.page-footer {
 }
 .myquote {
   text-shadow: 2px 2px black;
+  /*max-width: 50vw !important;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;*/
+}
+.myavatar {
+  max-height: calc(70vw / 4 );
 }
 .icon-block {
   height: inherit;
+}
+.justify {
+  text-align: justify;
 }
