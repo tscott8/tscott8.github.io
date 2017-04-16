@@ -32,6 +32,10 @@ p {
   .parallax-container .section {
     width: 100%;
   }
+  .anchor {
+    padding-top: 64px;
+    margin-top: -64px;
+  }
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -41,8 +45,9 @@ p {
   #index-banner .section {
     top: 10%;
   }
-  .online {
-    display: none;
+  .anchor {
+    padding-top: 56px;
+    margin-top: -56px;
   }
 }
 
@@ -50,8 +55,9 @@ p {
   #index-banner .section {
     top: 0;
   }
-  .online {
-    display: none;
+  .anchor {
+    padding-top: 56px;
+    margin-top: -56px;
   }
 }
 .icon-block {
@@ -156,7 +162,3 @@ footer.page-footer {
     top: -250px;
     visibility: hidden;
 }*/
-.anchor {
-  padding-top: 64px;
-  margin-top: -64px;
-}
