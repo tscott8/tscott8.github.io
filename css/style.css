@@ -56,6 +56,7 @@ p {
 }
 .icon-block {
   /*padding: 0 15px;*/
+  height: inherit;
 }
 .icon-block .material-icons {
   font-size: inherit;
@@ -88,8 +89,9 @@ footer.page-footer {
 }
 .bullet-icon-text {
   /*margin-right: 0.75em;*/
-  text-overflow: ellipsis;
-  flex-wrap: nowrap;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow-x: hidden;
 }
 
 .card: {
@@ -101,9 +103,6 @@ footer.page-footer {
 .myicon {
   max-width: 100%;
 }
-.myicon2 {
-  width: 50px;
-}
 .languages i{
   font-size: 5em;
   margin-top: 0.25em;
@@ -111,18 +110,53 @@ footer.page-footer {
 }
 .myquote {
   text-shadow: 2px 2px black;
-  /*max-width: 50vw !important;
-  justify-content: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;*/
 }
 .myavatar {
-  max-height: calc(70vw / 4 );
+  max-height: 243px;
+  /*max-height: calc(271px - (271px * .1));
+  max-width: calc(271px - (271px * .1));*/
 }
-.icon-block {
-  height: inherit;
+.img-box {
+    position:relative;
+    min-width: 271px;
+    min-height:271px;
+    display: flex;
+}
+.img-box-contents {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10%;
+}
+.img-box-image {
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .justify {
   text-align: justify;
+}
+/*a.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}*/
+.anchor {
+  padding-top: 64px;
+  margin-top: -64px;
 }
