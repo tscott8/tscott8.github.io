@@ -162,3 +162,11 @@ footer.page-footer {
     top: -250px;
     visibility: hidden;
 }*/
+.popover-img {
+  display: none;
+}
+.popover-container:hover {
+  .popover-img {
+    display: block;
+  }
+}
