@@ -28,8 +28,8 @@ function get_nav_links (type) {
   console.log(n);
   return n;
 }
-document.write('\
-<div class="navbar-fixed">\
+$('#insert-nav').html('\
+<div class="navbar">\
   <ul id="portfolioDrop" class="dropdown-content grey darken-4">'+p.join("")+'</ul>\
   <ul id="portfolioDrop-mobile" class="dropdown-content dropdown-content-mobile grey darken-4">'+p.join("")+'</ul>\
   <nav class="grey darken-4" role="navigation">\
