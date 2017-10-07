@@ -21,7 +21,7 @@ var nav_links = [
 function get_nav_links (type) {
   var n = $.map(nav_links, function(obj, i) {
     if(obj.label === "PORTFOLIO")
-     return '<li><a class="white-text" href="'+obj.url+'" data-induration="300" data-outduration="225" data-beloworigin="true" data-hover="true" data-activates="'+type+'"">'+obj.label+'</a></li>';
+     return '<li><a class="white-text" href="'+obj.url+'" data-induration="300" data-outduration="225" data-beloworigin="true" data-hover="true" data-activates='+type+'>'+obj.label+'</a></li>';
     else
       return '<li><a class="white-text" href="'+obj.url+'">'+obj.label+'</a></li>';
   });
