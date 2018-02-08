@@ -6,6 +6,8 @@ var array = [
   {label:'Vonn Neumann Architecture Demo', url:'portfolio.html#VNAness'},
   {label:'Shift', url:'portfolio.html#Shift'},
   {label:'Arcane', url:'portfolio.html#Arcane'},
+  {label:'IMSAR ERP', url:'portfolio.html#erp'},
+
 ]
 var pEl = $.map(array, function(obj, i) {
   return '<li><a class="white-text" href="'+obj.url+'">'+obj.label+'</a></li>';

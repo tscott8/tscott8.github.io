@@ -5,6 +5,7 @@ var array = [
 {id:'VNAness', imgURL:'https://github.com/tscott8/VNAness/raw/master/images/3.png', cTitle:'VNAness', smText:'Visual tool for understanding the basic architecture of a PC.', lgText:'Visual tool for understanding the basic architecture of a PC.', repoID:'repo5', actionURL:'http://tscott8.github.io/VNAness/VNADemo.html', actionText:'Full Demo'},
 {id:'Shift', imgURL:'http://blog.mailgun.com/content/images/2016/09/ml.jpg', cTitle:'Shift', smText:'Using clustering algorithms to predict better recommendations on Spotify.', lgText:'Using clustering algorithms to predict better recommendations on Spotify.', repoID:'repo6', actionURL:'http://tscott8.github.io/shift', actionText:'Unavailable'},
 {id:'Arcane', imgURL:'https://github.com/tscott8/sr_project_research/blob/master/arcane/static/images/audience-desktop.jpg?raw=true', cTitle:'Arcane', smText:'Streaming Service, Customizeable Music Player, and more.', lgText:'Streaming Service, Customizeable Music Player, and more.', repoID:'repo7', actionURL:'http://tscott8.github.io/arcane', actionText:'Under Construction'},
+{id:'erp', imgURL:'', cTitle:'IMSAR ERP', smText:'Enterprise Resource Management', lgText:'Inventory, manufacturing, accounting, purchasing management system', repoID:'', actionURL:'', actionText:'Privately Owned'}
 ]
 // var el = $.map(array, function(obj, i) {
 //   return (
